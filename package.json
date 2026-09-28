@@ -1,0 +1,25 @@
+{
+  "name": "opus-5.5-motion-videos",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Programmatic motion videos for Amazon Sponsored Brands and other ad placements.",
+  "scripts": {
+    "dev": "remotion studio src/index.ts",
+    "render": "bash scripts/render.sh",
+    "still": "remotion still src/index.ts SponsoredBrandsLandscape outputs/preview.png --frame=60 --props=configs/sample-product.json",
+    "validate": "bash scripts/validate-output.sh",
+    "typecheck": "tsc --noEmit",
+    "check-configs": "node scripts/check-configs.mjs",
+    "test": "npm run typecheck && npm run check-configs"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.529",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.529"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.8",
+    "typescript": "5.8.3"
+  }
+}
