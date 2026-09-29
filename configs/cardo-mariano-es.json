@@ -1,0 +1,21 @@
+{
+  "id": "cardo-mariano-es",
+  "lang": "es",
+  "energy": "digestive",
+  "name": "Cardo Mariano",
+  "subtitle": "10.000 mg",
+  "bottle": "products/cardo-bottle.png",
+  "hook": ["Protege.", "Depura.", "Cuida tu *hígado.*"],
+  "capsules": 80,
+  "days": 80,
+  "doseLine": "1 cápsula al día",
+  "countLabels": { "capsules": "cápsulas", "days": "días", "weeks": "semanas" },
+  "ingredientsTitle": "Lo que hay *dentro*",
+  "ingredients": [
+    { "name": "Extracto 25:1", "amount": "400 mg", "note": "Semillas de cardo" },
+    { "name": "Silimarina", "amount": "80%", "note": "320 mg por cápsula" },
+    { "name": "Colina", "amount": "200 mg", "note": "Función hepática normal" }
+  ],
+  "badges": ["Vegano", "Sin gluten", "Sin OGM"],
+  "tagline": ["Bienestar,", "*bien hecho.*"]
+}

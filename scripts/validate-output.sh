@@ -23,7 +23,7 @@ echo "File: $FILE (${width}x${height}, ${codec}, ${duration}s, ${size} bytes)"
 check "codec is h264" '[ "$codec" = "h264" ]'
 check "duration ${MIN_SEC}-${MAX_SEC}s" "awk 'BEGIN{exit !($duration >= $MIN_SEC && $duration <= $MAX_SEC)}'"
 check "size <= 500MB" '[ "$size" -le "$MAX_BYTES" ]'
-check "resolution is 1920x1080, 1280x720, 3840x2160 or 1080x1920" \
-  'case "${width}x${height}" in 1920x1080|1280x720|3840x2160|1080x1920) true;; *) false;; esac'
+check "resolution is 16:9 (1920x1080/1280x720/3840x2160), 1:1 (1080x1080) or 2:3 (1080x1620)" \
+  'case "${width}x${height}" in 1920x1080|1280x720|3840x2160|1080x1080|1080x1620) true;; *) false;; esac'
 
 exit $fail

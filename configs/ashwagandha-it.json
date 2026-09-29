@@ -1,0 +1,27 @@
+{
+  "id": "ashwagandha-it",
+  "lang": "it",
+  "energy": "sleep",
+  "name": "Ashwagandha",
+  "subtitle": "Sensoril®",
+  "bottle": "products/ashwagandha-bottle.png",
+  "hook": ["Rilassati.", "Dormi.", "Svegliati *bene.*"],
+  "capsules": 30,
+  "days": 30,
+  "doseLine": "1 capsula al giorno",
+  "countLabels": { "capsules": "capsule", "days": "giorni", "weeks": "settimane" },
+  "ingredientsTitle": "Cosa c'è *dentro*",
+  "ingredients": [
+    { "name": "Sensoril®", "amount": "300 mg", "note": "Radice + foglia" },
+    { "name": "BioPerine®", "amount": "3 mg", "note": "Pepe nero" },
+    { "name": "Vitamina B6", "amount": "1,4 mg", "note": "100% VNR" }
+  ],
+  "badges": ["Vegano", "Senza glutine", "Capsule vegetali"],
+  "tagline": ["Calma serale.", "Risveglio *migliore.*"],
+  "photos": {
+    "hook": "lifestyle/evening-still.jpg",
+    "product": "lifestyle/woman-tea.jpg",
+    "dose": "lifestyle/man-capsule.jpg",
+    "brand": "lifestyle/woman-mug.jpg"
+  }
+}
