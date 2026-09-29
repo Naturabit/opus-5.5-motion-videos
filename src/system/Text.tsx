@@ -4,7 +4,7 @@ import { colors, ease, fonts } from "./theme";
 
 type Token = { word: string; accent: boolean };
 
-// "*word*" marks an accent word: italic serif in gold.
+// "*word*" marks an accent word, set in the accent colour (never italic).
 const tokenize = (text: string): Token[] => {
   const out: Token[] = [];
   let accent = false;
@@ -84,9 +84,7 @@ export const MaskWords: React.FC<{
                 display: "inline-block",
                 transform: `translateY(${(1 - p) * 110 - out * 110}%) scale(${0.95 + 0.05 * p})`,
                 transformOrigin: "bottom left",
-                fontStyle: t.accent ? "italic" : "normal",
                 color: t.accent ? accentColor : color,
-                fontWeight: t.accent && family === "serif" ? 400 : weight,
               }}
             >
               {t.word}

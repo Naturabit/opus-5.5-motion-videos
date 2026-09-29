@@ -2,24 +2,24 @@ import { Easing, staticFile } from "remotion";
 import { loadFont } from "@remotion/fonts";
 
 // Fonts ship in assets/fonts (OFL-1.1, from Fontsource) so renders never depend on the network.
-const FACES: [family: string, file: string, weight: string, style: string][] = [
-  ["Playfair Display", "playfair-display-latin-400-normal", "400", "normal"],
-  ["Playfair Display", "playfair-display-latin-500-normal", "500", "normal"],
-  ["Playfair Display", "playfair-display-latin-700-normal", "700", "normal"],
-  ["Playfair Display", "playfair-display-latin-400-italic", "400", "italic"],
-  ["Playfair Display", "playfair-display-latin-500-italic", "500", "italic"],
-  ["Manrope", "manrope-latin-500-normal", "500", "normal"],
-  ["Manrope", "manrope-latin-700-normal", "700", "normal"],
-  ["Manrope", "manrope-latin-800-normal", "800", "normal"],
+// Marcellus has a single weight; it is registered for every weight the components request so the
+// browser never synthesizes a fake bold. Jost's files map to the sans weights components use.
+const FACES: [family: string, file: string, weight: string][] = [
+  ["Marcellus", "marcellus-latin-400-normal", "400"],
+  ["Marcellus", "marcellus-latin-400-normal", "500"],
+  ["Marcellus", "marcellus-latin-400-normal", "700"],
+  ["Jost", "jost-latin-500-normal", "500"],
+  ["Jost", "jost-latin-600-normal", "700"],
+  ["Jost", "jost-latin-700-normal", "800"],
 ];
 
-for (const [family, file, weight, style] of FACES) {
-  loadFont({ family, url: staticFile(`fonts/${file}.woff2`), weight, style });
+for (const [family, file, weight] of FACES) {
+  loadFont({ family, url: staticFile(`fonts/${file}.woff2`), weight, style: "normal" });
 }
 
 export const fonts = {
-  serif: "'Playfair Display', Georgia, serif",
-  sans: "Manrope, Helvetica, Arial, sans-serif",
+  serif: "Marcellus, Georgia, serif",
+  sans: "Jost, Helvetica, Arial, sans-serif",
 };
 
 export const colors = {

@@ -1,6 +1,6 @@
 import { AbsoluteFill, Sequence, interpolate, useCurrentFrame } from "remotion";
 import { Bottle, CapsulePhoto, GoldCircle, GoldLine, Grain, Logo, Wipe } from "../system/Graphics";
-import { Counter, Eyebrow, MaskWords } from "../system/Text";
+import { Counter, MaskWords } from "../system/Text";
 import { clamp, useLayout, useUnit } from "../system/motion";
 import { colors, ease, fonts } from "../system/theme";
 import type { Product } from "../system/product";
@@ -28,7 +28,7 @@ const Hook: React.FC<{ p: Product }> = ({ p }) => {
       <Fill bg={dark ? colors.navy : colors.ivory}>
         <Sequence from={i * beatLen} layout="none">
           <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", transform: `scale(${zoom})` }}>
-            <MaskWords text={p.hook[i]} size={300 * u} color={dark ? colors.ivory : colors.ink} align="center" stagger={3} duration={14} />
+            <MaskWords text={p.hook[i]} size={Math.min(300, 3000 / p.hook[i].length) * u} color={dark ? colors.ivory : colors.ink} align="center" stagger={3} duration={14} />
           </AbsoluteFill>
         </Sequence>
       </Fill>
@@ -47,7 +47,7 @@ const Hook: React.FC<{ p: Product }> = ({ p }) => {
           }}
         >
           <div style={{ display: "flex", flexDirection: "column", gap: 36 * u }}>
-            <MaskWords text={p.hook[beats - 1]} size={230 * u} stagger={5} />
+            <MaskWords text={p.hook[beats - 1]} size={205 * u} stagger={5} />
             <GoldLine length={520 * u} thickness={5 * u} delay={10} />
           </div>
           <div style={{ position: "relative", width: 780 * u, display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -85,9 +85,8 @@ const ProductHero: React.FC<{ p: Product }> = ({ p }) => {
         }}
       >
         <div style={{ width: portrait ? undefined : 820 * u, display: "flex", flexDirection: "column", gap: 24 * u }}>
-          <Eyebrow text="Estado Puro" size={30 * u} delay={8} />
-          <MaskWords text={p.name} size={Math.min(150, 1300 / p.name.length) * u} color={colors.ivory} delay={10} weight={500} />
-          <MaskWords text={`*${p.subtitle}*`} size={110 * u} color={colors.ivory} delay={20} />
+          <MaskWords text={p.name} size={Math.min(140, 1150 / p.name.length) * u} color={colors.ivory} delay={10} weight={500} />
+          <MaskWords text={`*${p.subtitle}*`} size={Math.min(110, 1300 / p.subtitle.length) * u} color={colors.ivory} delay={20} />
           <div style={{ marginTop: 12 * u }}>
             <GoldLine length={360 * u} thickness={4 * u} delay={28} />
           </div>
@@ -242,30 +241,27 @@ const Brand: React.FC<{ p: Product }> = ({ p }) => {
         }}
       >
         <Bottle src={p.bottle} height={780 * u} delay={0} from="left" tilt={8} />
-        <div style={{ display: "flex", flexDirection: "column", gap: 34 * u, alignItems: portrait ? "center" : "flex-start" }}>
-          <Logo variant="navy" width={560 * u} delay={4} />
-          <div>
-            {p.tagline.map((line, i) => (
-              <MaskWords key={line} text={line} size={96 * u} delay={14 + i * 6} align={portrait ? "center" : "left"} />
-            ))}
-          </div>
+        <div style={{ display: "flex", flexDirection: "column", gap: 34 * u, alignItems: "center" }}>
+          <Logo variant="navy" width={580 * u} delay={4} />
+          {p.tagline.map((line, i) => (
+            <MaskWords key={line} text={line} size={92 * u} delay={14 + i * 6} align="center" />
+          ))}
           <div
             style={{
               display: "flex",
-              gap: 18 * u,
+              alignItems: "center",
+              gap: 22 * u,
               opacity: badgeP,
               transform: `translateY(${(1 - badgeP) * 20 * u}px)`,
               fontFamily: fonts.sans,
               fontWeight: 700,
-              fontSize: 26 * u,
-              letterSpacing: "0.16em",
-              textTransform: "uppercase",
+              fontSize: 32 * u,
               color: colors.ink,
             }}
           >
             {p.badges.map((b, i) => (
-              <span key={b} style={{ display: "flex", alignItems: "center", gap: 18 * u }}>
-                {i > 0 && <span style={{ width: 8 * u, height: 8 * u, borderRadius: 99, background: colors.gold }} />}
+              <span key={b} style={{ display: "flex", alignItems: "center", gap: 22 * u }}>
+                {i > 0 && <span style={{ width: 9 * u, height: 9 * u, borderRadius: 99, background: colors.gold }} />}
                 {b}
               </span>
             ))}

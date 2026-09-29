@@ -3,20 +3,45 @@
   "lang": "es",
   "energy": "sleep",
   "name": "Ashwagandha",
-  "subtitle": "Sensoril®",
+  "subtitle": "10% withanólidos",
   "bottle": "products/ashwagandha-es.png",
-  "hook": ["Relájate.", "Duerme.", "Despierta *bien.*"],
+  "hook": [
+    "Relájate.",
+    "Recupera el foco.",
+    "Sigue *adelante.*"
+  ],
   "capsules": 30,
   "days": 30,
   "doseLine": "1 cápsula al día",
-  "countLabels": { "capsules": "cápsulas", "days": "días", "weeks": "semanas" },
+  "countLabels": {
+    "capsules": "cápsulas",
+    "days": "días",
+    "weeks": "semanas"
+  },
   "ingredients": [
-    { "name": "Sensoril®", "amount": "300 mg", "note": "Raíz + hoja" },
-    { "name": "BioPerine®", "amount": "3 mg", "note": "Pimienta negra" },
-    { "name": "Vitamina B6", "amount": "1,4 mg", "note": "100% VRN" }
+    {
+      "name": "Sensoril®",
+      "amount": "300 mg",
+      "note": "Raíz + hoja de Ashwagandha patentada"
+    },
+    {
+      "name": "BioPerine®",
+      "amount": "3 mg",
+      "note": "Pimienta negra patentada"
+    },
+    {
+      "name": "Vitamina B6",
+      "amount": "1,4 mg",
+      "note": "Función normal del sistema nervioso"
+    }
   ],
-  "badges": ["Vegano", "Sin gluten", "Cápsulas vegetales"],
-  "tagline": ["Bienestar,", "*bien hecho.*"],
+  "badges": [
+    "Formulado por expertos",
+    "Fabricación 100% española"
+  ],
+  "tagline": [
+    "Bienestar, *bien hecho.*"
+  ],
   "photos": {
     "hook": "lifestyle/evening-still.jpg",
     "product": "lifestyle/woman-tea.jpg",
@@ -24,8 +49,19 @@
     "brand": "lifestyle/woman-mug.jpg"
   },
   "horizon": {
-    "hook": ["textures/sunset.jpg", "textures/leaf-drops.jpg", "textures/roots-tree.jpg", "textures/leaf-purple.jpg", "textures/moss.jpg", "textures/leaf-warm.jpg"],
+    "hook": [
+      "textures/sunset.jpg",
+      "textures/leaf-drops.jpg",
+      "textures/roots-tree.jpg",
+      "textures/leaf-purple.jpg",
+      "textures/moss.jpg",
+      "textures/leaf-warm.jpg"
+    ],
     "product": "textures/moss-silver.jpg",
-    "ingredients": ["textures/roots.jpg", "textures/pepper.jpg", "textures/leaf-glow.jpg"]
+    "ingredients": [
+      "textures/roots.jpg",
+      "textures/pepper.jpg",
+      "textures/leaf-glow.jpg"
+    ]
   }
 }
