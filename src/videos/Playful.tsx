@@ -195,7 +195,6 @@ const Ingredients: React.FC<{ p: Product }> = ({ p }) => {
   const size = Math.min(330 * u, (width - 180 * u - 140 * u) / 3);
   return (
     <AbsoluteFill style={{ background: colors.ivory, alignItems: "center", justifyContent: "center", gap: 60 * u, padding: 90 * u }}>
-      <MaskWords text={p.ingredientsTitle} size={120 * u} align="center" delay={2} />
       <div style={{ display: "flex", flexDirection: "row", gap: 70 * u, alignItems: "flex-start" }}>
         {p.ingredients.map((ing, i) => {
           const bob = Math.sin((frame + i * 12) / 10) * 8 * u;

@@ -209,3 +209,17 @@ export const KenBurns: React.FC<{ src: string; from?: number; to?: number; durat
     </div>
   );
 };
+
+// Real capsule photo (assets/products/capsule.png). The source image points down-right at ~38deg,
+// so `angle` uses the same convention as <Capsule>.
+export const CapsulePhoto: React.FC<{ length: number; angle?: number; shadow?: boolean }> = ({ length, angle = 0, shadow = true }) => (
+  <Img
+    src={staticFile("products/capsule.png")}
+    style={{
+      width: length * 0.9,
+      display: "block",
+      transform: `rotate(${angle - 38}deg)`,
+      filter: shadow ? `drop-shadow(0 ${length * 0.08}px ${length * 0.1}px rgba(11,23,51,0.3))` : undefined,
+    }}
+  />
+);

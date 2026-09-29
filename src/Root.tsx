@@ -2,9 +2,10 @@ import { Composition } from "remotion";
 import { Editorial, EDITORIAL_FRAMES } from "./videos/Editorial";
 import { Playful, PLAYFUL_FRAMES } from "./videos/Playful";
 import { Lifestyle, LIFESTYLE_FRAMES } from "./videos/Lifestyle";
+import { Horizon, HORIZON_FRAMES } from "./videos/Horizon";
 import { FPS } from "./system/theme";
 import type { Product } from "./system/product";
-import ashwagandha from "../configs/ashwagandha-it.json";
+import ashwagandha from "../configs/ashwagandha-es.json";
 import cardo from "../configs/cardo-mariano-es.json";
 
 const PRODUCTS: Record<string, Product> = {
@@ -20,6 +21,7 @@ const FORMATS = [
 
 const VARIANTS = [
   { id: "Editorial", component: Editorial, frames: EDITORIAL_FRAMES },
+  { id: "Horizon", component: Horizon, frames: HORIZON_FRAMES, needsHorizon: true },
   { id: "Playful", component: Playful, frames: PLAYFUL_FRAMES },
   // Lifestyle crops come from listing images and only frame well in 16:9 until real photos exist.
   { id: "Lifestyle", component: Lifestyle, frames: LIFESTYLE_FRAMES, needsPhotos: true, formats: ["16x9"] },
@@ -30,6 +32,7 @@ export const RemotionRoot: React.FC = () => (
     {VARIANTS.flatMap((v) =>
       Object.entries(PRODUCTS)
         .filter(([, product]) => !("needsPhotos" in v) || product.photos)
+        .filter(([, product]) => !("needsHorizon" in v) || product.horizon)
         .flatMap(([name, product]) =>
         FORMATS.filter((f) => !("formats" in v) || (v.formats ?? []).includes(f.id)).map((f) => (
           <Composition

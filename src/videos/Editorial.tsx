@@ -1,5 +1,5 @@
 import { AbsoluteFill, Sequence, interpolate, useCurrentFrame } from "remotion";
-import { Bottle, Capsule, GoldCircle, GoldLine, Grain, Logo, Wipe } from "../system/Graphics";
+import { Bottle, CapsulePhoto, GoldCircle, GoldLine, Grain, Logo, Wipe } from "../system/Graphics";
 import { Counter, Eyebrow, MaskWords } from "../system/Text";
 import { clamp, useLayout, useUnit } from "../system/motion";
 import { colors, ease, fonts } from "../system/theme";
@@ -111,7 +111,7 @@ const ProductHero: React.FC<{ p: Product }> = ({ p }) => {
                   zIndex: i === 1 ? 2 : 0,
                 }}
               >
-                <Capsule length={c.len * u * 1.4} angle={c.a + (1 - t) * 180} />
+                <CapsulePhoto length={c.len * u * 1.5} angle={c.a + (1 - t) * 180} />
               </div>
             );
           })}
@@ -174,7 +174,7 @@ const CapsuleCount: React.FC<{ p: Product }> = ({ p }) => {
             return (
               <div key={i} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <div style={{ transform: `translateY(${(1 - pIn) * -60 * u + wave * cell}px) scale(${pIn})`, opacity: pIn }}>
-                  <Capsule length={cell * 0.86} angle={-35 + (1 - pIn) * 90} shadow={n <= 40} />
+                  <CapsulePhoto length={cell * 0.95} angle={-35 + (1 - pIn) * 90} shadow={n <= 40} />
                 </div>
               </div>
             );
@@ -187,16 +187,15 @@ const CapsuleCount: React.FC<{ p: Product }> = ({ p }) => {
 
 const Ingredients: React.FC<{ p: Product }> = ({ p }) => {
   const u = useUnit();
-  const { portrait } = useLayout();
-  const size = (portrait ? 280 : 300) * u;
+  const { portrait, width } = useLayout();
+  const size = portrait ? 330 * u : Math.min(440 * u, (width - 220 * u - 120 * u) / 3);
   return (
     <Fill bg={colors.navy}>
-      <AbsoluteFill style={{ padding: 110 * u, justifyContent: "center", gap: 70 * u }}>
-        <MaskWords text={p.ingredientsTitle} size={130 * u} color={colors.ivory} delay={4} align={portrait ? "center" : "left"} />
+      <AbsoluteFill style={{ padding: 110 * u, justifyContent: "center" }}>
         <div style={{ position: "relative" }}>
           {!portrait && (
             <div style={{ position: "absolute", left: -110 * u, right: -110 * u, top: size / 2 }}>
-              <GoldLine length={2400 * u} thickness={3 * u} delay={10} duration={26} />
+              <GoldLine length={2400 * u} thickness={3 * u} delay={2} duration={24} />
             </div>
           )}
           <div
@@ -204,18 +203,18 @@ const Ingredients: React.FC<{ p: Product }> = ({ p }) => {
               display: "flex",
               flexDirection: portrait ? "column" : "row",
               justifyContent: "space-between",
-              alignItems: "center",
-              gap: 50 * u,
+              alignItems: portrait ? "flex-start" : "center",
+              gap: (portrait ? 70 : 60) * u,
             }}
           >
             {p.ingredients.map((ing, i) => (
-              <div key={ing.name} style={{ display: "flex", flexDirection: portrait ? "row" : "column", alignItems: "center", gap: 26 * u, flex: 1 }}>
-                <GoldCircle size={size} delay={16 + i * 9} fill={colors.navyDeep} stroke={4 * u}>
-                  <div style={{ fontFamily: fonts.serif, fontSize: 68 * u, color: colors.goldLight, lineHeight: 1, fontVariantNumeric: "lining-nums" }}>{ing.amount ?? ""}</div>
+              <div key={ing.name} style={{ display: "flex", flexDirection: portrait ? "row" : "column", alignItems: "center", gap: 34 * u, flex: portrait ? undefined : 1 }}>
+                <GoldCircle size={size} delay={6 + i * 9} fill={colors.navyDeep} stroke={5 * u}>
+                  <div style={{ fontFamily: fonts.serif, fontSize: size * 0.21, color: colors.goldLight, lineHeight: 1, fontVariantNumeric: "lining-nums" }}>{ing.amount ?? ""}</div>
                 </GoldCircle>
-                <div style={{ display: "flex", flexDirection: "column", alignItems: portrait ? "flex-start" : "center", gap: 6 * u }}>
-                  <MaskWords text={ing.name} size={62 * u} color={colors.ivory} delay={24 + i * 9} align={portrait ? "left" : "center"} />
-                  <MaskWords text={ing.note} family="sans" weight={500} size={30 * u} color={colors.goldLight} letterSpacing={0.02} delay={30 + i * 9} align={portrait ? "left" : "center"} />
+                <div style={{ display: "flex", flexDirection: "column", alignItems: portrait ? "flex-start" : "center", gap: 10 * u }}>
+                  <MaskWords text={ing.name} size={(portrait ? 96 : 92) * u} color={colors.ivory} delay={14 + i * 9} align={portrait ? "left" : "center"} />
+                  <MaskWords text={ing.note} family="sans" weight={700} size={(portrait ? 40 : 38) * u} color={colors.goldLight} letterSpacing={0.02} delay={20 + i * 9} align={portrait ? "left" : "center"} />
                 </div>
               </div>
             ))}

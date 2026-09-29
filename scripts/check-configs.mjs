@@ -10,7 +10,7 @@ for (const file of files) {
   const err = (msg) => errors.push(`${file}: ${msg}`);
   const str = (v) => typeof v === "string" && v.trim().length > 0;
 
-  for (const key of ["id", "lang", "name", "subtitle", "bottle", "doseLine", "ingredientsTitle"]) {
+  for (const key of ["id", "lang", "name", "subtitle", "bottle", "doseLine"]) {
     if (!str(c[key])) err(`${key} must be a non-empty string`);
   }
   if (!ENERGY.includes(c.energy)) err(`energy must be one of ${ENERGY.join(", ")}`);
@@ -26,7 +26,12 @@ for (const file of files) {
   }
   if (!Array.isArray(c.badges) || c.badges.length > 3) err("badges must have 0-3 items");
 
-  const assets = [c.bottle, ...Object.values(c.photos ?? {})];
+  if (c.horizon) {
+    if (!Array.isArray(c.horizon.hook) || c.horizon.hook.length < 3) err("horizon.hook needs at least 3 textures");
+    if (!str(c.horizon.product)) err("horizon.product texture is required");
+    if (!Array.isArray(c.horizon.ingredients) || c.horizon.ingredients.length !== 3) err("horizon.ingredients needs 3 textures");
+  }
+  const assets = [c.bottle, ...Object.values(c.photos ?? {}), ...(c.horizon ? [...c.horizon.hook, c.horizon.product, ...c.horizon.ingredients] : [])];
   for (const a of assets) {
     if (a && !existsSync(join("assets", a))) err(`asset not found in assets/: ${a}`);
   }

@@ -135,7 +135,6 @@ const Ingredients: React.FC<{ p: Product }> = ({ p }) => {
   const { portrait } = useLayout();
   return (
     <AbsoluteFill style={{ background: colors.ivory, justifyContent: "center", padding: 110 * u, gap: 56 * u }}>
-      <MaskWords text={p.ingredientsTitle} size={120 * u} align={portrait ? "center" : "left"} delay={2} />
       <div style={{ display: "flex", flexDirection: portrait ? "column" : "row", gap: 60 * u }}>
         {p.ingredients.map((ing, i) => (
           <div key={ing.name} style={{ display: "flex", alignItems: "center", gap: 28 * u, flex: 1 }}>

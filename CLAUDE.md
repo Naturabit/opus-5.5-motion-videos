@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Remotion (React) project that renders Estado Puro ad videos for Amazon (Sponsored Brands video etc.). One JSON config per product feeds three variants (Editorial, Playful, Lifestyle) in three formats (16x9, 1x1, 2x3).
+Remotion (React) project that renders Estado Puro ad videos for Amazon (Sponsored Brands video etc.). All copy is Spanish. One JSON config per product feeds four variants (Editorial = the client favourite, Horizon, Playful, Lifestyle) in three formats (16x9, 1x1, 2x3).
 
 ## Commands
 
@@ -20,12 +20,15 @@ Remotion (React) project that renders Estado Puro ad videos for Amazon (Sponsore
 - `src/system/Graphics.tsx`: signature elements from the motion brief: `GoldLine`, `Wipe` (full-frame panel at a scene cut), `GoldCircle`, `Capsule` (vector), `Bottle` (cutout with spring entrance and ground shadow), `Logo` (clip reveal), `KenBurns`, `Grain`.
 - `src/videos/*.tsx`: each variant exports its component and `*_FRAMES`; scene start frames live in the `T` object at the top.
 - `src/system/product.ts`: the `Product` type = the config schema. `scripts/check-configs.mjs` enforces it.
-- `src/Root.tsx`: registers variant × product × format. Lifestyle only registers for products with `photos`, and only in 16x9.
+- `src/Root.tsx`: registers variant × product × format. Lifestyle only registers for products with `photos` (16x9 only); Horizon only for products with `horizon` textures.
+- `src/videos/Horizon.tsx`: timeline in `T`; `surfaceAt()` decides which texture sits under the horizon at each frame.
+- Bottles are `assets/products/*-es.png` (Spanish labels, supplied by the client). `CapsulePhoto` uses the real capsule photo.
 
 ## Rules
 
 - Animate only from `useCurrentFrame()` (`interpolate`, `spring`, `random(seed)`). No CSS transitions, timers, or `Math.random()`.
 - Amazon: product visible within 3 s, movement from frame 0, every message readable on mute, big type (hooks ≥ ~150px at 1080p).
-- Copy: short. Use the brand's own listing wording for health statements; supplement claims must follow EU/EFSA rules, so flag any new claim for human review instead of inventing one.
+- Textures: public domain only (CC0/PDM via Openverse); record each in `assets/textures/CREDITS.md`.
+- Copy: short, Spanish. No section titles like "Lo que hay dentro"; let ingredients carry the scene. No "Sin OGM" badge. Use the brand's own listing wording for health statements; supplement claims must follow EU/EFSA rules, so flag any new claim for human review instead of inventing one.
 - Adding a config field: update `Product`, every config, and `check-configs.mjs` together.
 - Verify visual changes by rendering stills at several frames in every format you touched, not only by typechecking.

@@ -12,9 +12,9 @@ export type Product = {
   days: number;
   doseLine: string;
   countLabels: { capsules: string; days: string; weeks?: string };
-  ingredientsTitle: string;
   ingredients: Ingredient[];
   badges: string[];
   tagline: string[];
   photos?: { hook?: string; product?: string; dose?: string; brand?: string };
+  horizon?: { hook: string[]; product: string; ingredients: string[] };
 };
