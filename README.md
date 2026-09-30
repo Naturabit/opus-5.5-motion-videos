@@ -43,6 +43,7 @@ src/system/        design system: theme tokens, text reveals, gold line, wipes, 
 src/videos/        the four variants
 scripts/           render, stills, output validation, config checks, bottle cutout
 outputs/           renders (git-ignored)
+3d/                3D product models: GLB, Blender source, renders (see 3d/*/SPEC.md)
 ```
 
 ## Adding a product

@@ -1,0 +1,11 @@
+{
+  "triangles": 67312,
+  "capsules": 80,
+  "capsule_centres_top_mm": 63.61,
+  "label_mm": [
+    201.062,
+    70.975
+  ],
+  "overall_h_mm": 112.0,
+  "body_d_mm": 64.0
+}

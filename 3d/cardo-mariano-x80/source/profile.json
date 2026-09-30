@@ -1,0 +1,81 @@
+{
+  "units": "mm",
+  "fixed": {
+    "body_d_over_label": 64.0,
+    "overall_h": 112.0,
+    "label_len": 201.062,
+    "label_h": 70.975,
+    "label_t": 0.1,
+    "label_front_u": 0.4885
+  },
+  "profile": {
+    "heel_r": 8.489,
+    "heel_h": 7.279,
+    "label_z0": 8.371,
+    "shoulder_z0": 79.346,
+    "shoulder_z1": 86.358,
+    "neck_r": 23.449,
+    "shoulder_p": 1.708,
+    "cap_z0": 89.205,
+    "cap_band_r": 25.328,
+    "cap_band_h": 2.629,
+    "cap_rib_r": 24.669,
+    "cap_rim_r": 25.396,
+    "cap_rim_h": 3.331,
+    "cap_top_fillet": 2.992,
+    "overall_h": 112.0
+  },
+  "packshot_fit_before_reconcile": {
+    "label_z0": 9.52,
+    "heel_r": 8.489,
+    "heel_h": 8.278,
+    "gap_above_label": 0.0,
+    "shoulder_h": 7.974,
+    "neck_r": 23.449,
+    "shoulder_p": 1.708,
+    "neck_h": 3.238,
+    "cap_h": 25.923,
+    "cap_band_r": 25.328,
+    "cap_band_h": 2.99,
+    "cap_rib_r": 24.669,
+    "cap_rim_r": 25.396,
+    "cap_rim_h": 3.789,
+    "cap_top_fillet": 2.992
+  },
+  "reconcile": {
+    "packshot_implied_overall_h": 117.63,
+    "vertical_scale_outside_label": 0.8793,
+    "note": "sizes above/below the label scaled so the stack is the client's 112 mm"
+  },
+  "packshot_camera": {
+    "cam_h": 119.1002,
+    "cam_dist": 850.0359,
+    "pitch_deg": -6.5702,
+    "focal_px": 6455.4086,
+    "cx": 267.5597,
+    "cy": 712.8517,
+    "y_stretch": 1.0423,
+    "note": "cam_h is measured from the label's bottom edge; y_stretch = vertical stretch of the packshot image"
+  },
+  "fit": {
+    "stage_a_label_bands_and_sides": {
+      "median_px": 0.15,
+      "p95_px": 1.47,
+      "max_px": 3.11
+    },
+    "stage_b_outline_distance": {
+      "median_px": 0.77,
+      "p95_px": 2.47,
+      "max_px": 7.1
+    },
+    "px_per_mm_at_axis": 7.594
+  },
+  "optimizer": {
+    "stage_a": "`ftol` termination condition is satisfied.",
+    "stage_b": "`xtol` termination condition is satisfied.",
+    "nfev": [
+      121,
+      30
+    ]
+  }
+}
