@@ -1,0 +1,45 @@
+{
+  "id": "ginkgo-es",
+  "lang": "es",
+  "energy": "daily",
+  "name": "Ginkgo Biloba",
+  "subtitle": "6.500 mg",
+  "bottle": "products/bottles/M59.png",
+  "hook": [
+    "Memoria.",
+    "Concentración.",
+    "Despierta tu *mente.*"
+  ],
+  "capsules": 80,
+  "days": 80,
+  "doseLine": "1 cápsula al día",
+  "countLabels": {
+    "capsules": "cápsulas",
+    "days": "días",
+    "weeks": "semanas"
+  },
+  "ingredients": [
+    {
+      "name": "Extracto 50:1",
+      "note": "Hojas de ginkgo",
+      "amount": "130 mg"
+    },
+    {
+      "name": "Flavonoides",
+      "note": "Ginkgoflavonglicósidos",
+      "amount": "31,2 mg"
+    },
+    {
+      "name": "Terpenolactonas",
+      "note": "Estandarizado",
+      "amount": "7,8 mg"
+    }
+  ],
+  "badges": [
+    "Formulado por expertos",
+    "Fabricación 100% española"
+  ],
+  "tagline": [
+    "Bienestar, *bien hecho.*"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "boswellia-es",
+  "lang": "es",
+  "energy": "daily",
+  "name": "Boswellia + Cúrcuma",
+  "subtitle": "Con pimienta negra",
+  "bottle": "products/bottles/M92.png",
+  "hook": [
+    "Muévete.",
+    "Sin miedo.",
+    "Sigue *adelante.*"
+  ],
+  "capsules": 40,
+  "days": 40,
+  "doseLine": "1 cápsula al día",
+  "countLabels": {
+    "capsules": "cápsulas",
+    "days": "días",
+    "weeks": "semanas"
+  },
+  "ingredients": [
+    {
+      "name": "Boswellia",
+      "note": "260 mg ácido boswélico",
+      "amount": "400 mg"
+    },
+    {
+      "name": "Cúrcuma 25:1",
+      "note": "190 mg curcuminoides",
+      "amount": "200 mg"
+    },
+    {
+      "name": "BioPerine®",
+      "note": "Pimienta negra patentada",
+      "amount": "2 mg"
+    }
+  ],
+  "badges": [
+    "Formulado por expertos",
+    "Fabricación 100% española"
+  ],
+  "tagline": [
+    "Bienestar, *bien hecho.*"
+  ]
+}

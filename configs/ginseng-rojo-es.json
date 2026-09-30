@@ -1,0 +1,44 @@
+{
+  "id": "ginseng-rojo-es",
+  "lang": "es",
+  "energy": "energy",
+  "name": "Ginseng Rojo Coreano",
+  "subtitle": "1000 mg de raíz",
+  "bottle": "products/bottles/M96.png",
+  "hook": [
+    "Menos fatiga.",
+    "Más foco.",
+    "Más *energía.*"
+  ],
+  "capsules": 50,
+  "days": 25,
+  "doseLine": "2 cápsulas al día",
+  "countLabels": {
+    "capsules": "cápsulas",
+    "days": "días",
+    "weeks": "semanas"
+  },
+  "ingredients": [
+    {
+      "name": "Ginseng rojo",
+      "note": "Raíz de Panax ginseng",
+      "amount": "1000 mg"
+    },
+    {
+      "name": "Ginsenósidos",
+      "note": "Estandarizado",
+      "amount": "20 mg"
+    },
+    {
+      "name": "IL HWA",
+      "note": "Cultivo propio en Corea"
+    }
+  ],
+  "badges": [
+    "Formulado por expertos",
+    "Fabricación 100% española"
+  ],
+  "tagline": [
+    "Bienestar, *bien hecho.*"
+  ]
+}

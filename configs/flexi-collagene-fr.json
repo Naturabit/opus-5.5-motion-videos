@@ -1,0 +1,46 @@
+{
+  "id": "flexi-collagene-fr",
+  "lang": "fr",
+  "energy": "daily",
+  "name": "Flexi Collagène",
+  "subtitle": "Collagène marin 5 g",
+  "bottle": "products/bottles/FM35.png",
+  "hook": [
+    "Un verre.",
+    "Chaque jour.",
+    "Continuez *d'avancer.*"
+  ],
+  "capsules": 275,
+  "days": 25,
+  "doseLine": "11 g par jour",
+  "countLabels": {
+    "capsules": "grammes",
+    "days": "doses"
+  },
+  "ingredients": [
+    {
+      "name": "Collagène marin",
+      "note": "Hydrolysé",
+      "amount": "5 g"
+    },
+    {
+      "name": "Ovomet®",
+      "note": "Membrane d'œuf",
+      "amount": "100 mg"
+    },
+    {
+      "name": "Vitamine C",
+      "note": "Formation normale du collagène",
+      "amount": "80 mg"
+    }
+  ],
+  "badges": [
+    "Formulé par des experts",
+    "Entreprise 100% française"
+  ],
+  "tagline": [
+    "Bien-être, *bien fait.*"
+  ],
+  "brand": "essence-pure",
+  "unit": "powder"
+}

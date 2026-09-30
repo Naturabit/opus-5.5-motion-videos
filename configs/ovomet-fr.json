@@ -1,0 +1,46 @@
+{
+  "id": "ovomet-fr",
+  "lang": "fr",
+  "energy": "skin",
+  "name": "Collagène Ovomet®",
+  "subtitle": "Collagène végétarien",
+  "bottle": "products/bottles/FM14.png",
+  "hook": [
+    "Collagène.",
+    "Végétarien.",
+    "Une gélule *par jour.*"
+  ],
+  "capsules": 30,
+  "days": 30,
+  "doseLine": "1 gélule par jour",
+  "countLabels": {
+    "capsules": "gélules",
+    "days": "jours",
+    "weeks": "semaines"
+  },
+  "ingredients": [
+    {
+      "name": "Ovomet®",
+      "note": "Source végétarienne de collagène",
+      "amount": "300 mg"
+    },
+    {
+      "name": "Vitamine C",
+      "note": "Formation normale du collagène",
+      "amount": "80 mg"
+    },
+    {
+      "name": "Acide hyaluronique",
+      "note": "Membrane de coquille d'œuf",
+      "amount": "10 mg"
+    }
+  ],
+  "badges": [
+    "Formulé par des experts",
+    "Entreprise 100% française"
+  ],
+  "tagline": [
+    "Bien-être, *bien fait.*"
+  ],
+  "brand": "essence-pure"
+}

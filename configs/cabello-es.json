@@ -1,0 +1,46 @@
+{
+  "id": "cabello-es",
+  "lang": "es",
+  "energy": "hair",
+  "name": "Cabello, Piel y Uñas",
+  "subtitle": "Fórmula multifactorial",
+  "bottle": "products/bottles/M80.png",
+  "hook": [
+    "Cabello.",
+    "Piel.",
+    "*Uñas.*"
+  ],
+  "capsules": 60,
+  "days": 30,
+  "doseLine": "2 cápsulas al día",
+  "countLabels": {
+    "capsules": "cápsulas",
+    "days": "días",
+    "weeks": "semanas"
+  },
+  "ingredients": [
+    {
+      "name": "Biotina + Zinc",
+      "note": "Cabello, piel y uñas normales",
+      "amount": "150 µg · 10 mg"
+    },
+    {
+      "name": "Ovomet®",
+      "note": "Membrana de huevo",
+      "amount": "100 mg"
+    },
+    {
+      "name": "seaBerry®",
+      "note": "Espino amarillo",
+      "amount": "120 mg"
+    }
+  ],
+  "badges": [
+    "Formulado por expertos",
+    "Fabricación 100% española"
+  ],
+  "tagline": [
+    "Bienestar, *bien hecho.*"
+  ],
+  "palette": "burgundy"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "arandano-es",
+  "lang": "es",
+  "energy": "daily",
+  "name": "Arándano Rojo",
+  "subtitle": "120 mg PACs",
+  "bottle": "products/bottles/M19.png",
+  "hook": [
+    "Cuídate.",
+    "Cada día.",
+    "Siéntete *tú.*"
+  ],
+  "capsules": 40,
+  "days": 20,
+  "doseLine": "2 cápsulas al día",
+  "countLabels": {
+    "capsules": "cápsulas",
+    "days": "días",
+    "weeks": "semanas"
+  },
+  "ingredients": [
+    {
+      "name": "Pacran®",
+      "note": "Arándano rojo entero",
+      "amount": "500 mg"
+    },
+    {
+      "name": "PACs",
+      "note": "Por dosis diaria",
+      "amount": "120 mg"
+    },
+    {
+      "name": "Vitamina C",
+      "note": "100% VRN",
+      "amount": "80 mg"
+    }
+  ],
+  "badges": [
+    "Formulado por expertos",
+    "Fabricación 100% española"
+  ],
+  "tagline": [
+    "Bienestar, *bien hecho.*"
+  ]
+}

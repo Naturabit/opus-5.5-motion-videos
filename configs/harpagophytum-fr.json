@@ -1,0 +1,46 @@
+{
+  "id": "harpagophytum-fr",
+  "lang": "fr",
+  "energy": "daily",
+  "name": "Harpagophytum",
+  "subtitle": "Harpagosides 5 %",
+  "bottle": "products/bottles/FM08.png",
+  "hook": [
+    "Extra fort.",
+    "1 600 mg.",
+    "Griffe du *diable.*"
+  ],
+  "capsules": 30,
+  "days": 30,
+  "doseLine": "1 gélule par jour",
+  "countLabels": {
+    "capsules": "gélules",
+    "days": "jours",
+    "weeks": "semaines"
+  },
+  "ingredients": [
+    {
+      "name": "Extrait 4:1",
+      "note": "Racines secondaires",
+      "amount": "400 mg"
+    },
+    {
+      "name": "Équivalent",
+      "note": "Poudre de racine",
+      "amount": "1 600 mg"
+    },
+    {
+      "name": "Harpagosides",
+      "note": "Standardisé à 5 %",
+      "amount": "20 mg"
+    }
+  ],
+  "badges": [
+    "Formulé par des experts",
+    "Entreprise 100% française"
+  ],
+  "tagline": [
+    "Bien-être, *bien fait.*"
+  ],
+  "brand": "essence-pure"
+}

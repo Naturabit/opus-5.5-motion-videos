@@ -1,0 +1,46 @@
+{
+  "id": "ashwagandha-fr",
+  "lang": "fr",
+  "energy": "sleep",
+  "name": "Ashwagandha",
+  "subtitle": "10 % de withanolides",
+  "bottle": "products/bottles/FM58.png",
+  "hook": [
+    "Détendez-vous.",
+    "Restez concentré.",
+    "*Avancez.*"
+  ],
+  "capsules": 30,
+  "days": 30,
+  "doseLine": "1 gélule par jour",
+  "countLabels": {
+    "capsules": "gélules",
+    "days": "jours",
+    "weeks": "semaines"
+  },
+  "ingredients": [
+    {
+      "name": "Sensoril®",
+      "note": "Racine + feuille brevetée",
+      "amount": "300 mg"
+    },
+    {
+      "name": "BioPerine®",
+      "note": "Poivre noir breveté",
+      "amount": "3 mg"
+    },
+    {
+      "name": "Vitamine B6",
+      "note": "Système nerveux normal",
+      "amount": "1,4 mg"
+    }
+  ],
+  "badges": [
+    "Formulé par des experts",
+    "Entreprise 100% française"
+  ],
+  "tagline": [
+    "Bien-être, *bien fait.*"
+  ],
+  "brand": "essence-pure"
+}

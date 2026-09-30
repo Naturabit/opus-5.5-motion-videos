@@ -1,0 +1,46 @@
+{
+  "id": "enzymes-fr",
+  "lang": "fr",
+  "energy": "digestive",
+  "name": "Maxi Enzymes",
+  "subtitle": "18 enzymes + probiotiques",
+  "bottle": "products/bottles/FM48.png",
+  "hook": [
+    "Mangez.",
+    "Digérez.",
+    "Léger après *chaque repas.*"
+  ],
+  "capsules": 80,
+  "days": 40,
+  "doseLine": "1 gélule à chaque repas",
+  "countLabels": {
+    "capsules": "gélules",
+    "days": "jours",
+    "weeks": "semaines"
+  },
+  "ingredients": [
+    {
+      "name": "Enzymes digestives",
+      "note": "Glucides, protéines, graisses",
+      "amount": "200 mg"
+    },
+    {
+      "name": "Ferments lactiques",
+      "note": "9 souches",
+      "amount": "400 M UFC"
+    },
+    {
+      "name": "Calcium",
+      "note": "Fonction normale des enzymes digestives",
+      "amount": "126 mg"
+    }
+  ],
+  "badges": [
+    "Formulé par des experts",
+    "Entreprise 100% française"
+  ],
+  "tagline": [
+    "Bien-être, *bien fait.*"
+  ],
+  "brand": "essence-pure"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "cannelle-fr",
+  "lang": "fr",
+  "energy": "daily",
+  "name": "Cannelle de Ceylan",
+  "subtitle": "2 500 mg",
+  "bottle": "products/bottles/FM15.png",
+  "hook": [
+    "Cannelle.",
+    "De Ceylan.",
+    "Glycémie *normale.*"
+  ],
+  "capsules": 30,
+  "days": 30,
+  "doseLine": "1 gélule par jour",
+  "countLabels": {
+    "capsules": "gélules",
+    "days": "jours",
+    "weeks": "semaines"
+  },
+  "ingredients": [
+    {
+      "name": "Extrait 5:1",
+      "note": "Écorce de cannelle",
+      "amount": "500 mg"
+    },
+    {
+      "name": "Équivalent",
+      "note": "Poudre d'écorce",
+      "amount": "2 500 mg"
+    },
+    {
+      "name": "Chrome",
+      "note": "Maintien d'une glycémie normale",
+      "amount": "40 µg"
+    }
+  ],
+  "badges": [
+    "Formulé par des experts",
+    "Entreprise 100% française"
+  ],
+  "tagline": [
+    "Bien-être, *bien fait.*"
+  ],
+  "brand": "essence-pure"
+}

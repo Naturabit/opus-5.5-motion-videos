@@ -171,12 +171,17 @@ export const Bottle: React.FC<{ src: string; height: number; delay?: number; fro
   );
 };
 
-export const Logo: React.FC<{ variant: "navy" | "ivory" | "gold"; width: number; delay?: number }> = ({ variant, width, delay = 0 }) => {
+export const Logo: React.FC<{ variant: "navy" | "ivory" | "gold" | "burgundy"; width: number; delay?: number; brand?: "estado-puro" | "essence-pure" }> = ({
+  variant,
+  width,
+  delay = 0,
+  brand = "estado-puro",
+}) => {
   const frame = useCurrentFrame();
   const p = interpolate(frame, [delay, delay + 26], [0, 1], { ...clamp, easing: ease.inOut });
   return (
     <div style={{ width, clipPath: `inset(-10% ${(1 - p) * 100}% -10% 0)` }}>
-      <Img src={staticFile(`brand/logo-${variant}.png`)} style={{ width, display: "block" }} />
+      <Img src={staticFile(`brand/${brand === "essence-pure" ? "essence-pure" : "logo"}-${variant}.png`)} style={{ width, display: "block" }} />
     </div>
   );
 };
@@ -212,9 +217,9 @@ export const KenBurns: React.FC<{ src: string; from?: number; to?: number; durat
 
 // Real capsule photo (assets/products/capsule.png). The source image points down-right at ~38deg,
 // so `angle` uses the same convention as <Capsule>.
-export const CapsulePhoto: React.FC<{ length: number; angle?: number; shadow?: boolean }> = ({ length, angle = 0, shadow = true }) => (
+export const CapsulePhoto: React.FC<{ length: number; angle?: number; shadow?: boolean; src?: string }> = ({ length, angle = 0, shadow = true, src = "products/capsule.png" }) => (
   <Img
-    src={staticFile("products/capsule.png")}
+    src={staticFile(src)}
     style={{
       width: length * 0.9,
       display: "block",

@@ -1,0 +1,46 @@
+{
+  "id": "chardon-marie-fr",
+  "lang": "fr",
+  "energy": "digestive",
+  "name": "Chardon-Marie",
+  "subtitle": "10 000 mg",
+  "bottle": "products/bottles/FM10.png",
+  "hook": [
+    "Protégez.",
+    "Purifiez.",
+    "Prenez soin de votre *foie.*"
+  ],
+  "capsules": 40,
+  "days": 40,
+  "doseLine": "1 gélule par jour",
+  "countLabels": {
+    "capsules": "gélules",
+    "days": "jours",
+    "weeks": "semaines"
+  },
+  "ingredients": [
+    {
+      "name": "Extrait 25:1",
+      "note": "Graines de chardon-marie",
+      "amount": "400 mg"
+    },
+    {
+      "name": "Silymarine",
+      "note": "80 %",
+      "amount": "320 mg"
+    },
+    {
+      "name": "Citrate de choline",
+      "note": "Fonction hépatique normale",
+      "amount": "200 mg"
+    }
+  ],
+  "badges": [
+    "Formulé par des experts",
+    "Entreprise 100% française"
+  ],
+  "tagline": [
+    "Bien-être, *bien fait.*"
+  ],
+  "brand": "essence-pure"
+}

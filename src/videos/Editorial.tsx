@@ -2,7 +2,7 @@ import { AbsoluteFill, Sequence, interpolate, useCurrentFrame } from "remotion";
 import { Bottle, CapsulePhoto, GoldCircle, GoldLine, Grain, Logo, Music, Wipe } from "../system/Graphics";
 import { Counter, MaskWords } from "../system/Text";
 import { clamp, useLayout, useUnit } from "../system/motion";
-import { colors, ease, fonts } from "../system/theme";
+import { colors, ease, fonts, palettes } from "../system/theme";
 import type { Product } from "../system/product";
 
 export const EDITORIAL_FRAMES = 600;
@@ -14,6 +14,7 @@ const Fill: React.FC<{ bg: string; children: React.ReactNode }> = ({ bg, childre
 );
 
 const Hook: React.FC<{ p: Product }> = ({ p }) => {
+  const pal = palettes[p.palette ?? "navy"];
   const u = useUnit();
   const { portrait } = useLayout();
   const frame = useCurrentFrame();
@@ -25,10 +26,10 @@ const Hook: React.FC<{ p: Product }> = ({ p }) => {
     const i = Math.floor(frame / beatLen);
     const dark = i % 2 === 1;
     return (
-      <Fill bg={dark ? colors.navy : colors.ivory}>
+      <Fill bg={dark ? pal.navy : colors.ivory}>
         <Sequence from={i * beatLen} layout="none">
           <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", transform: `scale(${zoom})` }}>
-            <MaskWords text={p.hook[i]} size={Math.min(300, 3000 / p.hook[i].length) * u} color={dark ? colors.ivory : colors.ink} align="center" stagger={4} duration={20} />
+            <MaskWords text={p.hook[i]} size={Math.min(300, 3000 / p.hook[i].length) * u} color={dark ? colors.ivory : pal.ink} align="center" stagger={4} duration={20} />
           </AbsoluteFill>
         </Sequence>
       </Fill>
@@ -47,7 +48,7 @@ const Hook: React.FC<{ p: Product }> = ({ p }) => {
           }}
         >
           <div style={{ display: "flex", flexDirection: "column", gap: 36 * u }}>
-            <MaskWords text={p.hook[beats - 1]} size={205 * u} stagger={5} />
+            <MaskWords text={p.hook[beats - 1]} size={205 * u} stagger={5} color={pal.ink} />
             <GoldLine length={520 * u} thickness={5 * u} delay={10} />
           </div>
           <div style={{ position: "relative", width: 780 * u, display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -69,12 +70,13 @@ const FLY = [
 ];
 
 const ProductHero: React.FC<{ p: Product }> = ({ p }) => {
+  const pal = palettes[p.palette ?? "navy"];
   const u = useUnit();
   const frame = useCurrentFrame();
   const { portrait } = useLayout();
   const bottleH = 820 * u;
   return (
-    <Fill bg={colors.navy}>
+    <Fill bg={pal.navy}>
       <AbsoluteFill
         style={{
           flexDirection: portrait ? "column-reverse" : "row",
@@ -93,9 +95,9 @@ const ProductHero: React.FC<{ p: Product }> = ({ p }) => {
         </div>
         <div style={{ position: "relative", width: bottleH * 0.9, height: bottleH, display: "flex", alignItems: "center", justifyContent: "center" }}>
           <div style={{ position: "absolute" }}>
-            <GoldCircle size={bottleH * 0.98} stroke={3 * u} delay={0} fill={colors.navyDeep} />
+            <GoldCircle size={bottleH * 0.98} stroke={3 * u} delay={0} fill={pal.navyDeep} />
           </div>
-          {FLY.map((c, i) => {
+          {p.unit !== "powder" && FLY.map((c, i) => {
             const t = interpolate(frame, [c.d, c.d + 26], [0, 1], { ...clamp, easing: ease.out });
             const drift = Math.sin((frame + i * 20) / 18) * 10 * u;
             return (
@@ -110,7 +112,7 @@ const ProductHero: React.FC<{ p: Product }> = ({ p }) => {
                   zIndex: i === 1 ? 2 : 0,
                 }}
               >
-                <CapsulePhoto length={c.len * u * 1.5} angle={c.a + (1 - t) * 180} />
+                <CapsulePhoto src={p.capsule} length={c.len * u * 1.5} angle={c.a + (1 - t) * 180} />
               </div>
             );
           })}
@@ -124,6 +126,7 @@ const ProductHero: React.FC<{ p: Product }> = ({ p }) => {
 };
 
 const CapsuleCount: React.FC<{ p: Product }> = ({ p }) => {
+  const pal = palettes[p.palette ?? "navy"];
   const u = useUnit();
   const frame = useCurrentFrame();
   const { portrait, width, height } = useLayout();
@@ -149,22 +152,30 @@ const CapsuleCount: React.FC<{ p: Product }> = ({ p }) => {
         }}
       >
         <div style={{ display: "flex", flexDirection: "column", gap: 18 * u, flex: portrait ? undefined : 1 }}>
-          <MaskWords text={p.doseLine} family="sans" weight={700} size={52 * u} letterSpacing={0} delay={0} />
+          <MaskWords text={p.doseLine} color={pal.ink} family="sans" weight={700} size={52 * u} letterSpacing={0} delay={0} />
           <div style={{ display: "flex", alignItems: "baseline", gap: 24 * u }}>
             <Counter
               to={n}
               delay={start}
               duration={countDur}
               linear
-              style={{ fontFamily: fonts.serif, fontSize: 380 * u, lineHeight: 0.9, color: colors.ink, fontWeight: 500 }}
+              style={{ fontFamily: fonts.serif, fontSize: 380 * u, lineHeight: 0.9, color: pal.ink, fontWeight: 500 }}
             />
-            <MaskWords text={p.countLabels.capsules} family="sans" weight={800} uppercase size={44 * u} letterSpacing={0.18} delay={start + 6} />
+            <MaskWords text={p.countLabels.capsules} color={pal.ink} family="sans" weight={800} uppercase size={44 * u} letterSpacing={0.18} delay={start + 6} />
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 28 * u }}>
             <GoldLine length={120 * u} thickness={5 * u} delay={done} />
-            <MaskWords text={`${p.days} *${p.countLabels.days}*`} size={130 * u} delay={done + 4} />
+            <MaskWords text={`${p.days} *${p.countLabels.days}*`} color={pal.ink} size={130 * u} delay={done + 4} />
           </div>
         </div>
+        {p.unit === "powder" ? (
+          <div style={{ position: "relative", width: 760 * u, height: 760 * u, display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <div style={{ position: "absolute" }}>
+              <GoldCircle size={740 * u} delay={4} fill={colors.ivoryDeep} />
+            </div>
+            <Bottle src={p.bottle} height={560 * u} delay={6} from="right" tilt={6} />
+          </div>
+        ) : (
         <div style={{ display: "grid", gridTemplateColumns: `repeat(${cols}, ${cell}px)`, gridAutoRows: `${cell}px` }}>
           {Array.from({ length: n }, (_, i) => {
             const t0 = start + i * step;
@@ -173,23 +184,25 @@ const CapsuleCount: React.FC<{ p: Product }> = ({ p }) => {
             return (
               <div key={i} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <div style={{ transform: `translateY(${(1 - pIn) * -60 * u + wave * cell}px) scale(${pIn})`, opacity: pIn }}>
-                  <CapsulePhoto length={cell * 0.95} angle={-35 + (1 - pIn) * 90} shadow={n <= 40} />
+                  <CapsulePhoto src={p.capsule} length={cell * 0.95} angle={-35 + (1 - pIn) * 90} shadow={n <= 40} />
                 </div>
               </div>
             );
           })}
         </div>
+        )}
       </AbsoluteFill>
     </Fill>
   );
 };
 
 const Ingredients: React.FC<{ p: Product }> = ({ p }) => {
+  const pal = palettes[p.palette ?? "navy"];
   const u = useUnit();
   const { portrait, width } = useLayout();
   const size = portrait ? 330 * u : Math.min(440 * u, (width - 220 * u - 120 * u) / 3);
   return (
-    <Fill bg={colors.navy}>
+    <Fill bg={pal.navy}>
       <AbsoluteFill style={{ padding: 110 * u, justifyContent: "center" }}>
         <div style={{ position: "relative" }}>
           {!portrait && (
@@ -208,7 +221,7 @@ const Ingredients: React.FC<{ p: Product }> = ({ p }) => {
           >
             {p.ingredients.map((ing, i) => (
               <div key={ing.name} style={{ display: "flex", flexDirection: portrait ? "row" : "column", alignItems: "center", gap: 34 * u, flex: portrait ? undefined : 1 }}>
-                <GoldCircle size={size} delay={6 + i * 14} fill={colors.navyDeep} stroke={5 * u}>
+                <GoldCircle size={size} delay={6 + i * 14} fill={pal.navyDeep} stroke={5 * u}>
                   <div style={{ fontFamily: fonts.serif, fontSize: size * 0.21, color: colors.goldLight, lineHeight: 1, fontVariantNumeric: "lining-nums" }}>{ing.amount ?? ""}</div>
                 </GoldCircle>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: portrait ? "flex-start" : "center", gap: 10 * u }}>
@@ -225,6 +238,7 @@ const Ingredients: React.FC<{ p: Product }> = ({ p }) => {
 };
 
 const Brand: React.FC<{ p: Product }> = ({ p }) => {
+  const pal = palettes[p.palette ?? "navy"];
   const u = useUnit();
   const frame = useCurrentFrame();
   const { portrait } = useLayout();
@@ -240,11 +254,11 @@ const Brand: React.FC<{ p: Product }> = ({ p }) => {
           padding: 100 * u,
         }}
       >
-        <Bottle src={p.bottle} height={780 * u} delay={0} from="left" tilt={8} />
+        <Bottle src={p.bottle} height={(p.unit === "powder" ? 620 : 780) * u} delay={0} from="left" tilt={8} />
         <div style={{ display: "flex", flexDirection: "column", gap: 34 * u, alignItems: "center" }}>
-          <Logo variant="navy" width={580 * u} delay={4} />
+          <Logo variant={p.palette === "burgundy" ? "burgundy" : "navy"} brand={p.brand} width={580 * u} delay={4} />
           {p.tagline.map((line, i) => (
-            <MaskWords key={line} text={line} size={92 * u} delay={14 + i * 6} align="center" />
+            <MaskWords key={line} text={line} color={pal.ink} size={92 * u} delay={14 + i * 6} align="center" />
           ))}
           <div
             style={{
@@ -256,7 +270,8 @@ const Brand: React.FC<{ p: Product }> = ({ p }) => {
               fontFamily: fonts.sans,
               fontWeight: 700,
               fontSize: 44 * u,
-              color: colors.ink,
+              color: pal.ink,
+              whiteSpace: "nowrap",
             }}
           >
             {p.badges.map((b, i) => (
@@ -272,7 +287,9 @@ const Brand: React.FC<{ p: Product }> = ({ p }) => {
   );
 };
 
-export const Editorial: React.FC<Product> = (p) => (
+export const Editorial: React.FC<Product> = (p) => {
+  const pal = palettes[p.palette ?? "navy"];
+  return (
   <AbsoluteFill style={{ background: colors.ivory }}>
     <Sequence durationInFrames={T.product}>
       <Hook p={p} />
@@ -289,12 +306,13 @@ export const Editorial: React.FC<Product> = (p) => (
     <Sequence from={T.brand}>
       <Brand p={p} />
     </Sequence>
-    <Wipe at={0} duration={20} direction="right" />
-    <Wipe at={T.product} duration={26} direction="up" />
-    <Wipe at={T.count} duration={26} color={colors.gold} accent={colors.navy} direction="left" />
-    <Wipe at={T.ingredients} duration={26} direction="right" />
+    <Wipe at={0} duration={20} color={pal.navy} direction="right" />
+    <Wipe at={T.product} duration={26} color={pal.navy} direction="up" />
+    <Wipe at={T.count} duration={26} color={colors.gold} accent={pal.navy} direction="left" />
+    <Wipe at={T.ingredients} duration={26} color={pal.navy} direction="right" />
     <Wipe at={T.brand} duration={26} color={colors.ivoryDeep} direction="down" />
     <Grain opacity={0.05} />
     <Music src="music/chill-vibe.mp3" volume={0.45} fadeIn={30} fadeOut={60} />
   </AbsoluteFill>
-);
+  );
+};

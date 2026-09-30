@@ -1,0 +1,45 @@
+{
+  "id": "curcuma-es",
+  "lang": "es",
+  "energy": "daily",
+  "name": "Cúrcuma",
+  "subtitle": "10.000 mg",
+  "bottle": "products/bottles/M41.png",
+  "hook": [
+    "Muévete.",
+    "Sin miedo.",
+    "Cúrcuma *concentrada.*"
+  ],
+  "capsules": 80,
+  "days": 80,
+  "doseLine": "1 cápsula al día",
+  "countLabels": {
+    "capsules": "cápsulas",
+    "days": "días",
+    "weeks": "semanas"
+  },
+  "ingredients": [
+    {
+      "name": "Extracto 25:1",
+      "note": "266 mg curcuminoides",
+      "amount": "280 mg"
+    },
+    {
+      "name": "Turmacin®",
+      "note": "Cúrcuma patentada",
+      "amount": "250 mg"
+    },
+    {
+      "name": "BioPerine®",
+      "note": "Pimienta negra patentada",
+      "amount": "2 mg"
+    }
+  ],
+  "badges": [
+    "Formulado por expertos",
+    "Fabricación 100% española"
+  ],
+  "tagline": [
+    "Bienestar, *bien hecho.*"
+  ]
+}

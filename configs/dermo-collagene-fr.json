@@ -1,0 +1,46 @@
+{
+  "id": "dermo-collagene-fr",
+  "lang": "fr",
+  "energy": "skin",
+  "name": "Dermo Collagène",
+  "subtitle": "Collagène marin 5 g",
+  "bottle": "products/bottles/FM36.png",
+  "hook": [
+    "Peau.",
+    "Éclat.",
+    "Beauté *de l'intérieur.*"
+  ],
+  "capsules": 275,
+  "days": 25,
+  "doseLine": "11 g par jour",
+  "countLabels": {
+    "capsules": "grammes",
+    "days": "doses"
+  },
+  "ingredients": [
+    {
+      "name": "Collagène marin",
+      "note": "Hydrolysé",
+      "amount": "5 g"
+    },
+    {
+      "name": "Acide hyaluronique",
+      "note": "Hydratation",
+      "amount": "10 mg"
+    },
+    {
+      "name": "Vitamine C",
+      "note": "Collagène pour une peau normale",
+      "amount": "80 mg"
+    }
+  ],
+  "badges": [
+    "Formulé par des experts",
+    "Entreprise 100% française"
+  ],
+  "tagline": [
+    "Bien-être, *bien fait.*"
+  ],
+  "brand": "essence-pure",
+  "unit": "powder"
+}

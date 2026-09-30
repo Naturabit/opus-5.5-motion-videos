@@ -1,0 +1,45 @@
+{
+  "id": "aubepine-fr",
+  "lang": "fr",
+  "energy": "daily",
+  "name": "Aubépine, Ail et Olivier",
+  "subtitle": "Huiles actives",
+  "bottle": "products/bottles/FM63.png",
+  "hook": [
+    "Trois plantes.",
+    "Une perle.",
+    "Votre rituel *quotidien.*"
+  ],
+  "capsules": 60,
+  "days": 20,
+  "doseLine": "3 perles par jour",
+  "countLabels": {
+    "capsules": "perles",
+    "days": "jours"
+  },
+  "ingredients": [
+    {
+      "name": "Aubépine",
+      "note": "Macérât de baies",
+      "amount": "600 mg"
+    },
+    {
+      "name": "Olivier",
+      "note": "Macérât de feuilles",
+      "amount": "600 mg"
+    },
+    {
+      "name": "Ail",
+      "note": "Macérât de bulbes frais",
+      "amount": "300 mg"
+    }
+  ],
+  "badges": [
+    "Formulé par des experts",
+    "Entreprise 100% française"
+  ],
+  "tagline": [
+    "Bien-être, *bien fait.*"
+  ],
+  "brand": "essence-pure"
+}

@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Remotion (React) project that renders Estado Puro ad videos for Amazon (Sponsored Brands video etc.). All copy is Spanish. One JSON config per product feeds four variants (Editorial = the client favourite, Horizon, Playful, Lifestyle) in 16x9 (1x1 and 2x3 compositions exist but are not delivered).
+Remotion (React) project that renders Estado Puro ad videos for Amazon (Sponsored Brands video etc.). Copy is Spanish (Estado Puro) or French (Essence Pure, Amazon.fr). One JSON config per product feeds four variants (Editorial = the client favourite, Horizon, Playful, Lifestyle) in 16x9 (1x1 and 2x3 compositions exist but are not delivered).
 
 ## Commands
 
@@ -22,7 +22,9 @@ Remotion (React) project that renders Estado Puro ad videos for Amazon (Sponsore
 - `src/system/product.ts`: the `Product` type = the config schema. `scripts/check-configs.mjs` enforces it.
 - `src/Root.tsx`: registers variant × product × format. Lifestyle only registers for products with `photos` (16x9 only); Horizon only for products with `horizon` textures.
 - `src/videos/Horizon.tsx`: timeline in `T`, horizon height per section in `LEVEL_KEYS`/`LEVELS`; `surfaceAt()` decides which texture sits under the horizon. The film finish (grade, weave, light leaks, `FilmGrain`) lives at the bottom of the component.
-- Bottles are `assets/products/*-es.png` (Spanish labels, supplied by the client). `CapsulePhoto` uses the real capsule photo.
+- Bottles: `assets/products/bottles/<code>.png` (trimmed from the client's `es/M##_EP_SinLabel.png` and `fr/FM##_Bote.png`). Codes map to ASINs in `assets/products/cross_reference_*.csv`; formulas, doses and pack sizes come from `assets/products/CATALOGO TECNICO TONGIL 2026.xlsx`. `CapsulePhoto` uses the real capsule photo (per-product override: `capsule`).
+- Optional config fields: `brand` (`essence-pure` for France: logo `brand/essence-pure-*.png`, French badges and tagline), `palette` (`burgundy` for the Clinic line), `unit: "powder"` (`capsules` = grams, `days` = doses; the count scene shows the tin).
+- The ES + FR catalogue roll-out registers Editorial 16x9 only (`EDITORIAL_ONLY` in `src/Root.tsx`).
 
 ## Rules
 

@@ -35,6 +35,13 @@ export const colors = {
   capsuleB: "#C9AE83",
 };
 
+// Base colours per product line. Gold and ivory stay the same across palettes.
+export const palettes = {
+  navy: { navy: colors.navy, navyDeep: colors.navyDeep, ink: colors.ink },
+  burgundy: { navy: "#6B2233", navyDeep: "#43121F", ink: "#5A1A28" },
+};
+export type Palette = (typeof palettes)["navy"];
+
 export const ease = {
   out: Easing.bezier(0.16, 1, 0.3, 1),
   inOut: Easing.bezier(0.65, 0, 0.35, 1),
