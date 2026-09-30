@@ -9,11 +9,11 @@ One JSON file per product drives four creative variants. All copy is Spanish. De
 | Variant | Look | Needs |
 |---|---|---|
 | `Editorial` | Bold kinetic serif type, hard cuts, navy/gold wipes, capsule count grid (the favourite) | bottle cutout |
-| `Horizon` | Indie-film match cuts: close-up nature textures fill most of the frame under a soft curved horizon, hard cuts every 0.4 s, one line of type above, animated grain and warm grade; the bottle rises like a sun | bottle cutout + `horizon` textures in the config |
+| `Horizon` | Indie-film match cuts: close-up nature textures fill most of the frame under a soft curved horizon, hard cuts every 0.5 s, one line of type above, animated grain and warm grade; the bottle rises like a sun | bottle cutout + `horizon` textures in the config |
 | `Playful` | Bouncy capsule character: bottle drop, capsule burst, a calendar that fills one capsule per day | bottle cutout |
 | `Lifestyle` | Natural photography, split screens, softer pacing | bottle cutout + 4 photos (16:9 only for now) |
 
-All videos are 15 s, silent-first (every claim is on screen), and show the product within the first 3 s.
+All videos are 20 s with CC0 background music (Editorial: "New growth", Horizon: "Summer21"), still readable on mute (every claim is on screen), and show the product within the first 3-4 s.
 
 ## Formats
 
@@ -36,6 +36,7 @@ assets/fonts/      Marcellus + Jost (OFL-1.1, bundled so renders work offline)
 assets/products/   bottle cutouts (transparent PNG)
 assets/lifestyle/  photos for the Lifestyle variant
 assets/textures/   public-domain textures for the Horizon variant (sources in CREDITS.md)
+assets/music/      CC0 background tracks from Freesound (sources in CREDITS.md)
 assets/references/ reference videos used for creative direction
 configs/           one JSON per product (Spanish copy, numbers, ingredients, asset paths)
 src/system/        design system: theme tokens, text reveals, gold line, wipes, gold circle, capsule, bottle

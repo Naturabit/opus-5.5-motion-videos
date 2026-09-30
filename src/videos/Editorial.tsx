@@ -1,13 +1,13 @@
 import { AbsoluteFill, Sequence, interpolate, useCurrentFrame } from "remotion";
-import { Bottle, CapsulePhoto, GoldCircle, GoldLine, Grain, Logo, Wipe } from "../system/Graphics";
+import { Bottle, CapsulePhoto, GoldCircle, GoldLine, Grain, Logo, Music, Wipe } from "../system/Graphics";
 import { Counter, MaskWords } from "../system/Text";
 import { clamp, useLayout, useUnit } from "../system/motion";
 import { colors, ease, fonts } from "../system/theme";
 import type { Product } from "../system/product";
 
-export const EDITORIAL_FRAMES = 450;
+export const EDITORIAL_FRAMES = 600;
 
-const T = { hook: 0, product: 84, count: 174, ingredients: 294, brand: 390 };
+const T = { hook: 0, product: 126, count: 246, ingredients: 396, brand: 516 };
 
 const Fill: React.FC<{ bg: string; children: React.ReactNode }> = ({ bg, children }) => (
   <AbsoluteFill style={{ background: bg }}>{children}</AbsoluteFill>
@@ -18,9 +18,9 @@ const Hook: React.FC<{ p: Product }> = ({ p }) => {
   const { portrait } = useLayout();
   const frame = useCurrentFrame();
   const beats = p.hook.length;
-  const beatLen = 22;
+  const beatLen = 34;
   const finalStart = (beats - 1) * beatLen;
-  const zoom = interpolate(frame, [0, 84], [1, 1.05], clamp);
+  const zoom = interpolate(frame, [0, 126], [1, 1.05], clamp);
   if (frame < finalStart) {
     const i = Math.floor(frame / beatLen);
     const dark = i % 2 === 1;
@@ -28,7 +28,7 @@ const Hook: React.FC<{ p: Product }> = ({ p }) => {
       <Fill bg={dark ? colors.navy : colors.ivory}>
         <Sequence from={i * beatLen} layout="none">
           <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", transform: `scale(${zoom})` }}>
-            <MaskWords text={p.hook[i]} size={Math.min(300, 3000 / p.hook[i].length) * u} color={dark ? colors.ivory : colors.ink} align="center" stagger={3} duration={14} />
+            <MaskWords text={p.hook[i]} size={Math.min(300, 3000 / p.hook[i].length) * u} color={dark ? colors.ivory : colors.ink} align="center" stagger={4} duration={20} />
           </AbsoluteFill>
         </Sequence>
       </Fill>
@@ -133,7 +133,7 @@ const CapsuleCount: React.FC<{ p: Product }> = ({ p }) => {
   const gridW = portrait ? width - 200 * u : width * 0.44;
   const gridH = portrait ? height * 0.4 : height - 260 * u;
   const cell = Math.min(gridW / cols, gridH / rows);
-  const step = Math.min(1.6, 48 / n);
+  const step = Math.min(2.2, 64 / n);
   const start = 16;
   const countDur = step * n;
   const done = start + countDur;
@@ -208,12 +208,12 @@ const Ingredients: React.FC<{ p: Product }> = ({ p }) => {
           >
             {p.ingredients.map((ing, i) => (
               <div key={ing.name} style={{ display: "flex", flexDirection: portrait ? "row" : "column", alignItems: "center", gap: 34 * u, flex: portrait ? undefined : 1 }}>
-                <GoldCircle size={size} delay={6 + i * 9} fill={colors.navyDeep} stroke={5 * u}>
+                <GoldCircle size={size} delay={6 + i * 14} fill={colors.navyDeep} stroke={5 * u}>
                   <div style={{ fontFamily: fonts.serif, fontSize: size * 0.21, color: colors.goldLight, lineHeight: 1, fontVariantNumeric: "lining-nums" }}>{ing.amount ?? ""}</div>
                 </GoldCircle>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: portrait ? "flex-start" : "center", gap: 10 * u }}>
-                  <MaskWords text={ing.name} size={(portrait ? 96 : 92) * u} color={colors.ivory} delay={14 + i * 9} align={portrait ? "left" : "center"} />
-                  <MaskWords text={ing.note} family="sans" weight={700} size={(portrait ? 40 : 38) * u} color={colors.goldLight} letterSpacing={0.02} delay={20 + i * 9} align={portrait ? "left" : "center"} />
+                  <MaskWords text={ing.name} size={(portrait ? 96 : 92) * u} color={colors.ivory} delay={16 + i * 14} align={portrait ? "left" : "center"} />
+                  <MaskWords text={ing.note} family="sans" weight={700} size={(portrait ? 40 : 38) * u} color={colors.goldLight} letterSpacing={0.02} delay={24 + i * 14} align={portrait ? "left" : "center"} />
                 </div>
               </div>
             ))}
@@ -255,7 +255,7 @@ const Brand: React.FC<{ p: Product }> = ({ p }) => {
               transform: `translateY(${(1 - badgeP) * 20 * u}px)`,
               fontFamily: fonts.sans,
               fontWeight: 700,
-              fontSize: 32 * u,
+              fontSize: 44 * u,
               color: colors.ink,
             }}
           >
@@ -289,11 +289,12 @@ export const Editorial: React.FC<Product> = (p) => (
     <Sequence from={T.brand}>
       <Brand p={p} />
     </Sequence>
-    <Wipe at={0} duration={16} direction="right" />
-    <Wipe at={T.product} direction="up" />
-    <Wipe at={T.count} color={colors.gold} accent={colors.navy} direction="left" />
-    <Wipe at={T.ingredients} direction="right" />
-    <Wipe at={T.brand} color={colors.ivoryDeep} direction="down" />
+    <Wipe at={0} duration={20} direction="right" />
+    <Wipe at={T.product} duration={26} direction="up" />
+    <Wipe at={T.count} duration={26} color={colors.gold} accent={colors.navy} direction="left" />
+    <Wipe at={T.ingredients} duration={26} direction="right" />
+    <Wipe at={T.brand} duration={26} color={colors.ivoryDeep} direction="down" />
     <Grain opacity={0.05} />
+    <Music src="music/new-growth.mp3" skipSeconds={1} />
   </AbsoluteFill>
 );

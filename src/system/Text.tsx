@@ -38,7 +38,7 @@ export const MaskWords: React.FC<{
   text,
   delay = 0,
   stagger = 4,
-  duration = 18,
+  duration = 24,
   size,
   color = colors.ink,
   accentColor = colors.gold,

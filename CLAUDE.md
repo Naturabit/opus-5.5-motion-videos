@@ -28,7 +28,8 @@ Remotion (React) project that renders Estado Puro ad videos for Amazon (Sponsore
 
 - Animate only from `useCurrentFrame()` (`interpolate`, `spring`, `random(seed)`). No CSS transitions, timers, or `Math.random()`.
 - Amazon: product visible within 3 s, movement from frame 0, every message readable on mute, big type (hooks ≥ ~150px at 1080p).
-- Textures: public domain only (CC0/PDM via Openverse); record each in `assets/textures/CREDITS.md`.
+- Textures and music: public domain only (CC0/PDM via Openverse; music from Freesound CC0); record each in `assets/textures/CREDITS.md` or `assets/music/CREDITS.md`. `Music` (Graphics.tsx) plays a track with fades; `skipSeconds` skips the quiet intro.
+- Pacing: videos are 20 s (600 frames); each text beat stays on screen at least ~1 s so it can be read.
 - Copy: short, Spanish. No section titles like "Lo que hay dentro"; let ingredients carry the scene. No "Sin OGM" badge. No italics (the client dislikes them). No small uppercase eyebrow above product names. End card: logo centered over a one-line tagline, then badges "Formulado por expertos · Fabricación 100% española". Use the brand's own listing wording for health statements; supplement claims must follow EU/EFSA rules, so flag any new claim for human review instead of inventing one.
 - Adding a config field: update `Product`, every config, and `check-configs.mjs` together.
 - Verify visual changes by rendering stills at several frames in every format you touched, not only by typechecking.

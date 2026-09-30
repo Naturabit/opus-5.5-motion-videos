@@ -1,5 +1,5 @@
 import { AbsoluteFill, Img, interpolate, random, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
-import { Bottle, Logo } from "../system/Graphics";
+import { Bottle, Logo, Music } from "../system/Graphics";
 import { MaskWords } from "../system/Text";
 import { clamp, useLayout, useUnit } from "../system/motion";
 import { colors, fonts } from "../system/theme";
@@ -7,14 +7,14 @@ import type { Product } from "../system/product";
 
 // Match-cut style shot like indie film: close-up nature textures fill most of the frame under a soft,
 // curved horizon; one line of type sits above; heavy animated grain and a warm, faded grade on top.
-export const HORIZON_FRAMES = 450;
-const T = { intro: 0, hook: 18, product: 90, ingredients: 196, count: 322, brand: 384 };
-const HOOK_CUT = 12;
+export const HORIZON_FRAMES = 600;
+const T = { intro: 0, hook: 18, product: 108, ingredients: 246, count: 426, brand: 498 };
+const HOOK_CUT = 15;
 const ING_LEN = (T.count - T.ingredients) / 3;
 const LEAK_AT = [T.hook, T.product, T.ingredients, T.count, T.brand];
 
 // Horizon height (fraction of frame height) per section; eased between sections.
-const LEVEL_KEYS = [0, 18, 86, 100, 190, 204, 318, 330, 378, 392];
+const LEVEL_KEYS = [0, 18, 102, 120, 238, 256, 418, 434, 490, 508];
 const LEVELS = [1.05, 0.42, 0.42, 0.62, 0.62, 0.47, 0.47, 0.42, 0.42, 0.6];
 
 type Surface = { kind: "glow" } | { kind: "image"; src: string; start: number } | { kind: "capsule"; start: number };
@@ -193,8 +193,8 @@ export const Horizon: React.FC<Product> = (p) => {
             accentColor={colors.goldLight}
             align="center"
             delay={T.hook + hookIdx * hookLen}
-            stagger={3}
-            duration={12}
+            stagger={4}
+            duration={18}
           />
         </TextAbove>
       )}
@@ -253,7 +253,7 @@ export const Horizon: React.FC<Product> = (p) => {
 
       {frame >= T.count && frame < T.brand && (
         <TextAbove bottom={textBottom} u={u}>
-          {frame < T.count + 30 ? (
+          {frame < T.count + 36 ? (
             <MaskWords key="dose" text={p.doseLine} size={130 * u} color={colors.ivory} align="center" delay={T.count} />
           ) : (
             <MaskWords
@@ -263,7 +263,7 @@ export const Horizon: React.FC<Product> = (p) => {
               color={colors.ivory}
               accentColor={colors.goldLight}
               align="center"
-              delay={T.count + 30}
+              delay={T.count + 36}
             />
           )}
         </TextAbove>
@@ -275,7 +275,7 @@ export const Horizon: React.FC<Product> = (p) => {
           {p.tagline.map((line, i) => (
             <MaskWords key={line} text={line} size={88 * u} color={colors.ivory} accentColor={colors.goldLight} align="center" delay={T.brand + 12 + i * 6} />
           ))}
-          <MaskWords text={p.badges.join(" · ")} family="sans" weight={700} size={32 * u} color={colors.goldLight} letterSpacing={0.02} align="center" delay={T.brand + 24} stagger={2} />
+          <MaskWords text={p.badges.join(" · ")} family="sans" weight={700} size={44 * u} color={colors.goldLight} letterSpacing={0.02} align="center" delay={T.brand + 24} stagger={2} />
         </TextAbove>
       )}
 
@@ -291,6 +291,7 @@ export const Horizon: React.FC<Product> = (p) => {
       />
       <AbsoluteFill style={{ background: "radial-gradient(ellipse 80% 80% at 50% 50%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.5) 100%)" }} />
       <FilmGrain frame={frame} opacity={0.45} />
+      <Music src="music/summer21.mp3" skipSeconds={2} />
     </AbsoluteFill>
   );
 };

@@ -1,4 +1,4 @@
-import { AbsoluteFill, Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, Html5Audio, Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { clamp } from "./motion";
 import { colors, ease } from "./theme";
 
@@ -223,3 +223,22 @@ export const CapsulePhoto: React.FC<{ length: number; angle?: number; shadow?: b
     }}
   />
 );
+
+// Background track with a short fade-in and a fade-out over the last ~1.5 s.
+// `skipSeconds` jumps past the track's quiet intro so the music is present from frame 0.
+export const Music: React.FC<{ src: string; skipSeconds?: number; volume?: number }> = ({ src, skipSeconds = 0, volume = 0.7 }) => {
+  const { fps, durationInFrames } = useVideoConfig();
+  return (
+    <Html5Audio
+      src={staticFile(src)}
+      trimBefore={Math.round(skipSeconds * fps)}
+      volume={(f) =>
+        volume *
+        interpolate(f, [0, 12, durationInFrames - 45, durationInFrames - 2], [0, 1, 1, 0], {
+          extrapolateLeft: "clamp",
+          extrapolateRight: "clamp",
+        })
+      }
+    />
+  );
+};
