@@ -295,6 +295,6 @@ export const Editorial: React.FC<Product> = (p) => (
     <Wipe at={T.ingredients} duration={26} direction="right" />
     <Wipe at={T.brand} duration={26} color={colors.ivoryDeep} direction="down" />
     <Grain opacity={0.05} />
-    <Music src="music/new-growth.mp3" skipSeconds={1} />
+    <Music src="music/chill-vibe.mp3" volume={0.45} fadeIn={30} fadeOut={60} />
   </AbsoluteFill>
 );

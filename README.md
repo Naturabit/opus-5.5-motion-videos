@@ -13,7 +13,7 @@ One JSON file per product drives four creative variants. All copy is Spanish. De
 | `Playful` | Bouncy capsule character: bottle drop, capsule burst, a calendar that fills one capsule per day | bottle cutout |
 | `Lifestyle` | Natural photography, split screens, softer pacing | bottle cutout + 4 photos (16:9 only for now) |
 
-All videos are 20 s with CC0 background music (Editorial: "New growth", Horizon: "Summer21"), still readable on mute (every claim is on screen), and show the product within the first 3-4 s.
+All videos are 20 s with CC0 background music (Editorial: "chill vibe" by heymanzzzz, Horizon: "Summer21"), still readable on mute (every claim is on screen), and show the product within the first 3-4 s.
 
 ## Formats
 

@@ -224,9 +224,14 @@ export const CapsulePhoto: React.FC<{ length: number; angle?: number; shadow?: b
   />
 );
 
-// Background track with a short fade-in and a fade-out over the last ~1.5 s.
-// `skipSeconds` jumps past the track's quiet intro so the music is present from frame 0.
-export const Music: React.FC<{ src: string; skipSeconds?: number; volume?: number }> = ({ src, skipSeconds = 0, volume = 0.7 }) => {
+// Background track with a fade-in and fade-out (frames). `skipSeconds` jumps past a quiet intro.
+export const Music: React.FC<{ src: string; skipSeconds?: number; volume?: number; fadeIn?: number; fadeOut?: number }> = ({
+  src,
+  skipSeconds = 0,
+  volume = 0.7,
+  fadeIn = 12,
+  fadeOut = 45,
+}) => {
   const { fps, durationInFrames } = useVideoConfig();
   return (
     <Html5Audio
@@ -234,7 +239,7 @@ export const Music: React.FC<{ src: string; skipSeconds?: number; volume?: numbe
       trimBefore={Math.round(skipSeconds * fps)}
       volume={(f) =>
         volume *
-        interpolate(f, [0, 12, durationInFrames - 45, durationInFrames - 2], [0, 1, 1, 0], {
+        interpolate(f, [0, fadeIn, durationInFrames - fadeOut, durationInFrames - 1], [0, 1, 1, 0], {
           extrapolateLeft: "clamp",
           extrapolateRight: "clamp",
         })
