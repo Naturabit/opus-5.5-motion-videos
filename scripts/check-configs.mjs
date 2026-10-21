@@ -26,7 +26,7 @@ for (const file of files) {
   if (c.days >= 45 && !str(c.countLabels?.weeks)) err("countLabels.weeks is required when days >= 45");
   if (!Array.isArray(c.ingredients) || c.ingredients.length !== 3) err("ingredients must have exactly 3 items");
   for (const [i, ing] of (c.ingredients ?? []).entries()) {
-    if (!str(ing.name) || !str(ing.note)) err(`ingredients[${i}] needs name and note`);
+    if (!str(ing.name) || !str(ing.note) || !str(ing.amount)) err(`ingredients[${i}] needs name, amount and note (an empty circle reads as a mistake)`);
   }
   if (!Array.isArray(c.badges) || c.badges.length > 3) err("badges must have 0-3 items");
 

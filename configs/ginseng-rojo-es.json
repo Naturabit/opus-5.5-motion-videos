@@ -21,17 +21,18 @@
   "ingredients": [
     {
       "name": "Ginseng rojo",
-      "note": "Raíz de Panax ginseng",
-      "amount": "1000 mg"
+      "amount": "1000 mg",
+      "note": "Polvo de raíz"
     },
     {
       "name": "Ginsenósidos",
-      "note": "Estandarizado",
-      "amount": "20 mg"
+      "amount": "20 mg",
+      "note": "Estandarizado"
     },
     {
       "name": "IL HWA",
-      "note": "Cultivo propio en Corea"
+      "amount": "100 %",
+      "note": "Raíz pura cultivada en Corea"
     }
   ],
   "badges": [

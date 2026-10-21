@@ -1,0 +1,47 @@
+{
+  "id": "ginseng-rouge-fr",
+  "lang": "fr",
+  "energy": "energy",
+  "name": "Ginseng Rouge Coréen",
+  "subtitle": "1000 mg de racine",
+  "bottle": "products/bottles/FM96.png",
+  "hook": [
+    "Moins de fatigue.",
+    "Plus de clarté.",
+    "Plus d'*énergie.*"
+  ],
+  "capsules": 50,
+  "days": 25,
+  "doseLine": "2 gélules par jour",
+  "countLabels": {
+    "capsules": "gélules",
+    "days": "jours",
+    "weeks": "semaines"
+  },
+  "ingredients": [
+    {
+      "name": "Ginseng rouge",
+      "amount": "1000 mg",
+      "note": "Poudre de racine"
+    },
+    {
+      "name": "Ginsénosides",
+      "amount": "20 mg",
+      "note": "Standardisé"
+    },
+    {
+      "name": "IL HWA",
+      "amount": "100 %",
+      "note": "Racine pure cultivée en Corée"
+    }
+  ],
+  "badges": [
+    "Formulé par des experts",
+    "Entreprise 100% française"
+  ],
+  "tagline": [
+    "Bien-être, *bien fait.*"
+  ],
+  "brand": "essence-pure",
+  "capsule": "products/capsules/FM96.png"
+}

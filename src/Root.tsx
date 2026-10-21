@@ -22,6 +22,7 @@ import enzymesfrCfg from "../configs/enzymes-fr.json";
 import flexicollagenefrCfg from "../configs/flexi-collagene-fr.json";
 import ginkgoesCfg from "../configs/ginkgo-es.json";
 import ginsengrojoesCfg from "../configs/ginseng-rojo-es.json";
+import ginsengrougefrCfg from "../configs/ginseng-rouge-fr.json";
 import harpagophytumfrCfg from "../configs/harpagophytum-fr.json";
 import magnesioesCfg from "../configs/magnesio-es.json";
 import magnesiov2esCfg from "../configs/magnesio-v2-es.json";
@@ -49,6 +50,7 @@ const EDITORIAL_ONLY: Record<string, Product> = {
   FlexiCollageneFR: flexicollagenefrCfg as Product,
   GinkgoES: ginkgoesCfg as Product,
   GinsengRojoES: ginsengrojoesCfg as Product,
+  GinsengRougeFR: ginsengrougefrCfg as Product,
   HarpagophytumFR: harpagophytumfrCfg as Product,
   MagnesioES: magnesioesCfg as Product,
   // Version 2: design system taken from the Magnesio Ultradirect label (navy + orange, sans headlines).

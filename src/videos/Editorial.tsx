@@ -86,7 +86,7 @@ const ProductHero: React.FC<{ p: Product }> = ({ p }) => {
           gap: 40 * u,
         }}
       >
-        <div style={{ width: portrait ? undefined : 820 * u, display: "flex", flexDirection: "column", gap: 24 * u }}>
+        <div style={{ width: portrait ? undefined : 820 * u, display: "flex", flexDirection: "column", gap: 24 * u, position: "relative", zIndex: 3 }}>
           <MaskWords text={p.name} size={Math.min(170, 2300 / p.name.length) * u} color={th.ivory} delay={10} weight={500} />
           <MaskWords text={`*${p.subtitle}*`} size={Math.min(120, 1900 / p.subtitle.length) * u} color={th.ivory} delay={20} />
           <div style={{ marginTop: 12 * u }}>
