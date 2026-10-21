@@ -21,6 +21,9 @@ const Hook: React.FC<{ p: Product }> = ({ p }) => {
   const beats = p.hook.length;
   const beatLen = 34;
   const finalStart = (beats - 1) * beatLen;
+  // The last beat sits beside the bottle; shrink it when its longest word would run into the circle.
+  const longestWord = Math.max(...p.hook[beats - 1].replace(/\*/g, "").split(" ").map((w) => w.length));
+  const finalSize = Math.min(205, 2150 / longestWord) * u;
   const zoom = interpolate(frame, [0, 126], [1, 1.05], clamp);
   if (frame < finalStart) {
     const i = Math.floor(frame / beatLen);
@@ -48,7 +51,7 @@ const Hook: React.FC<{ p: Product }> = ({ p }) => {
           }}
         >
           <div style={{ display: "flex", flexDirection: "column", gap: 36 * u }}>
-            <MaskWords text={p.hook[beats - 1]} size={205 * u} stagger={5} color={th.ink} />
+            <MaskWords text={p.hook[beats - 1]} size={finalSize} stagger={5} color={th.ink} />
             <GoldLine length={520 * u} thickness={5 * u} delay={10} />
           </div>
           <div style={{ position: "relative", width: 780 * u, display: "flex", alignItems: "center", justifyContent: "center" }}>
