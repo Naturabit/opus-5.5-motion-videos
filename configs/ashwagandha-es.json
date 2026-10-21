@@ -21,17 +21,17 @@
   "ingredients": [
     {
       "name": "Sensoril®",
-      "amount": "300 mg",
+      "amount": "300 mg",
       "note": "Raíz + hoja de Ashwagandha patentada"
     },
     {
       "name": "BioPerine®",
-      "amount": "3 mg",
+      "amount": "3 mg",
       "note": "Pimienta negra patentada"
     },
     {
       "name": "Vitamina B6",
-      "amount": "1,4 mg",
+      "amount": "1,4 mg",
       "note": "Función normal del sistema nervioso"
     }
   ],
@@ -63,5 +63,6 @@
       "textures/pepper.jpg",
       "textures/leaf-glow.jpg"
     ]
-  }
+  },
+  "capsule": "products/capsules/M58.png"
 }

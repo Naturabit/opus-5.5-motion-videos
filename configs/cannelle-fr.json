@@ -3,7 +3,7 @@
   "lang": "fr",
   "energy": "daily",
   "name": "Cannelle de Ceylan",
-  "subtitle": "2 500 mg",
+  "subtitle": "2 500 mg",
   "bottle": "products/bottles/FM15.png",
   "hook": [
     "Cannelle.",
@@ -22,17 +22,17 @@
     {
       "name": "Extrait 5:1",
       "note": "Écorce de cannelle",
-      "amount": "500 mg"
+      "amount": "500 mg"
     },
     {
       "name": "Équivalent",
       "note": "Poudre d'écorce",
-      "amount": "2 500 mg"
+      "amount": "2 500 mg"
     },
     {
       "name": "Chrome",
       "note": "Maintien d'une glycémie normale",
-      "amount": "40 µg"
+      "amount": "40 µg"
     }
   ],
   "badges": [
@@ -42,5 +42,6 @@
   "tagline": [
     "Bien-être, *bien fait.*"
   ],
-  "brand": "essence-pure"
+  "brand": "essence-pure",
+  "capsule": "products/capsules/FM15.png"
 }

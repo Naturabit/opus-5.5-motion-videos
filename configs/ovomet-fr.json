@@ -22,17 +22,17 @@
     {
       "name": "Ovomet®",
       "note": "Source végétarienne de collagène",
-      "amount": "300 mg"
+      "amount": "300 mg"
     },
     {
       "name": "Vitamine C",
       "note": "Formation normale du collagène",
-      "amount": "80 mg"
+      "amount": "80 mg"
     },
     {
       "name": "Acide hyaluronique",
       "note": "Membrane de coquille d'œuf",
-      "amount": "10 mg"
+      "amount": "10 mg"
     }
   ],
   "badges": [
@@ -42,5 +42,6 @@
   "tagline": [
     "Bien-être, *bien fait.*"
   ],
-  "brand": "essence-pure"
+  "brand": "essence-pure",
+  "capsule": "products/capsules/FM14.png"
 }

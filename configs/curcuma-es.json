@@ -3,7 +3,7 @@
   "lang": "es",
   "energy": "daily",
   "name": "Cúrcuma",
-  "subtitle": "10.000 mg",
+  "subtitle": "10.000 mg",
   "bottle": "products/bottles/M41.png",
   "hook": [
     "Muévete.",
@@ -21,18 +21,18 @@
   "ingredients": [
     {
       "name": "Extracto 25:1",
-      "note": "266 mg curcuminoides",
-      "amount": "280 mg"
+      "note": "266 mg curcuminoides",
+      "amount": "280 mg"
     },
     {
       "name": "Turmacin®",
       "note": "Cúrcuma patentada",
-      "amount": "250 mg"
+      "amount": "250 mg"
     },
     {
       "name": "BioPerine®",
       "note": "Pimienta negra patentada",
-      "amount": "2 mg"
+      "amount": "2 mg"
     }
   ],
   "badges": [
@@ -41,5 +41,6 @@
   ],
   "tagline": [
     "Bienestar, *bien hecho.*"
-  ]
+  ],
+  "capsule": "products/capsules/M41.png"
 }

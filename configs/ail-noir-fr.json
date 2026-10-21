@@ -3,7 +3,7 @@
   "lang": "fr",
   "energy": "daily",
   "name": "Ail Noir Vieilli",
-  "subtitle": "10 g d'ail frais",
+  "subtitle": "10 g d'ail frais",
   "bottle": "products/bottles/FM47.png",
   "hook": [
     "Ail noir.",
@@ -12,7 +12,7 @@
   ],
   "capsules": 80,
   "days": 40,
-  "doseLine": "2 gélules par jour",
+  "doseLine": "2 gélules par jour",
   "countLabels": {
     "capsules": "gélules",
     "days": "jours",
@@ -22,17 +22,17 @@
     {
       "name": "ABG10+®",
       "note": "Extrait 10:1",
-      "amount": "1000 mg"
+      "amount": "1000 mg"
     },
     {
       "name": "S-allyl-cystéine",
       "note": "Actif de l'ail noir",
-      "amount": "1 mg"
+      "amount": "1 mg"
     },
     {
       "name": "Polyphénols",
       "note": "Par dose journalière",
-      "amount": "30 mg"
+      "amount": "30 mg"
     }
   ],
   "badges": [
@@ -42,5 +42,6 @@
   "tagline": [
     "Bien-être, *bien fait.*"
   ],
-  "brand": "essence-pure"
+  "brand": "essence-pure",
+  "capsule": "products/capsules/FM47.png"
 }

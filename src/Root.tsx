@@ -24,6 +24,7 @@ import ginkgoesCfg from "../configs/ginkgo-es.json";
 import ginsengrojoesCfg from "../configs/ginseng-rojo-es.json";
 import harpagophytumfrCfg from "../configs/harpagophytum-fr.json";
 import magnesioesCfg from "../configs/magnesio-es.json";
+import magnesiov2esCfg from "../configs/magnesio-v2-es.json";
 import ovometfrCfg from "../configs/ovomet-fr.json";
 
 const PRODUCTS: Record<string, Product> = {
@@ -50,6 +51,8 @@ const EDITORIAL_ONLY: Record<string, Product> = {
   GinsengRojoES: ginsengrojoesCfg as Product,
   HarpagophytumFR: harpagophytumfrCfg as Product,
   MagnesioES: magnesioesCfg as Product,
+  // Version 2: design system taken from the Magnesio Ultradirect label (navy + orange, sans headlines).
+  MagnesioV2ES: magnesiov2esCfg as Product,
   OvometFR: ovometfrCfg as Product,
 };
 

@@ -12,7 +12,7 @@
   ],
   "capsules": 60,
   "days": 30,
-  "doseLine": "2 cápsulas al día",
+  "doseLine": "2 cápsulas al día",
   "countLabels": {
     "capsules": "cápsulas",
     "days": "días",
@@ -22,17 +22,17 @@
     {
       "name": "Biotina + Zinc",
       "note": "Cabello, piel y uñas normales",
-      "amount": "150 µg · 10 mg"
+      "amount": "150 µg · 10 mg"
     },
     {
       "name": "Ovomet®",
       "note": "Membrana de huevo",
-      "amount": "100 mg"
+      "amount": "100 mg"
     },
     {
       "name": "seaBerry®",
       "note": "Espino amarillo",
-      "amount": "120 mg"
+      "amount": "120 mg"
     }
   ],
   "badges": [
@@ -42,5 +42,6 @@
   "tagline": [
     "Bienestar, *bien hecho.*"
   ],
-  "palette": "burgundy"
+  "palette": "burgundy",
+  "capsule": "products/capsules/M80.png"
 }

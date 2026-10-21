@@ -3,7 +3,7 @@
   "lang": "fr",
   "energy": "digestive",
   "name": "Chardon-Marie",
-  "subtitle": "10 000 mg",
+  "subtitle": "10 000 mg",
   "bottle": "products/bottles/FM10.png",
   "hook": [
     "Protégez.",
@@ -22,17 +22,17 @@
     {
       "name": "Extrait 25:1",
       "note": "Graines de chardon-marie",
-      "amount": "400 mg"
+      "amount": "400 mg"
     },
     {
       "name": "Silymarine",
       "note": "80 %",
-      "amount": "320 mg"
+      "amount": "320 mg"
     },
     {
       "name": "Citrate de choline",
       "note": "Fonction hépatique normale",
-      "amount": "200 mg"
+      "amount": "200 mg"
     }
   ],
   "badges": [
@@ -42,5 +42,6 @@
   "tagline": [
     "Bien-être, *bien fait.*"
   ],
-  "brand": "essence-pure"
+  "brand": "essence-pure",
+  "capsule": "products/capsules/FM10.png"
 }

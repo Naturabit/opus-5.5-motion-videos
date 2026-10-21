@@ -22,17 +22,17 @@
     {
       "name": "Sensoril®",
       "note": "Racine + feuille brevetée",
-      "amount": "300 mg"
+      "amount": "300 mg"
     },
     {
       "name": "BioPerine®",
       "note": "Poivre noir breveté",
-      "amount": "3 mg"
+      "amount": "3 mg"
     },
     {
       "name": "Vitamine B6",
       "note": "Système nerveux normal",
-      "amount": "1,4 mg"
+      "amount": "1,4 mg"
     }
   ],
   "badges": [
@@ -42,5 +42,6 @@
   "tagline": [
     "Bien-être, *bien fait.*"
   ],
-  "brand": "essence-pure"
+  "brand": "essence-pure",
+  "capsule": "products/capsules/FM58.png"
 }

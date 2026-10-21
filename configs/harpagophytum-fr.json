@@ -7,7 +7,7 @@
   "bottle": "products/bottles/FM08.png",
   "hook": [
     "Extra fort.",
-    "1 600 mg.",
+    "1 600 mg.",
     "Griffe du *diable.*"
   ],
   "capsules": 30,
@@ -22,17 +22,17 @@
     {
       "name": "Extrait 4:1",
       "note": "Racines secondaires",
-      "amount": "400 mg"
+      "amount": "400 mg"
     },
     {
       "name": "Équivalent",
       "note": "Poudre de racine",
-      "amount": "1 600 mg"
+      "amount": "1 600 mg"
     },
     {
       "name": "Harpagosides",
       "note": "Standardisé à 5 %",
-      "amount": "20 mg"
+      "amount": "20 mg"
     }
   ],
   "badges": [
@@ -42,5 +42,6 @@
   "tagline": [
     "Bien-être, *bien fait.*"
   ],
-  "brand": "essence-pure"
+  "brand": "essence-pure",
+  "capsule": "products/capsules/FM08.png"
 }

@@ -12,7 +12,7 @@
   ],
   "capsules": 60,
   "days": 20,
-  "doseLine": "3 perles par jour",
+  "doseLine": "3 perles par jour",
   "countLabels": {
     "capsules": "perles",
     "days": "jours"
@@ -21,17 +21,17 @@
     {
       "name": "Aubépine",
       "note": "Macérât de baies",
-      "amount": "600 mg"
+      "amount": "600 mg"
     },
     {
       "name": "Olivier",
       "note": "Macérât de feuilles",
-      "amount": "600 mg"
+      "amount": "600 mg"
     },
     {
       "name": "Ail",
       "note": "Macérât de bulbes frais",
-      "amount": "300 mg"
+      "amount": "300 mg"
     }
   ],
   "badges": [
@@ -41,5 +41,6 @@
   "tagline": [
     "Bien-être, *bien fait.*"
   ],
-  "brand": "essence-pure"
+  "brand": "essence-pure",
+  "capsule": "products/capsules/FM63.png"
 }

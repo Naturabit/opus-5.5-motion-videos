@@ -3,7 +3,7 @@
   "lang": "fr",
   "energy": "skin",
   "name": "Dermo Collagène",
-  "subtitle": "Collagène marin 5 g",
+  "subtitle": "Collagène marin 5 g",
   "bottle": "products/bottles/FM36.png",
   "hook": [
     "Peau.",
@@ -12,7 +12,7 @@
   ],
   "capsules": 275,
   "days": 25,
-  "doseLine": "11 g par jour",
+  "doseLine": "11 g par jour",
   "countLabels": {
     "capsules": "grammes",
     "days": "doses"
@@ -21,17 +21,17 @@
     {
       "name": "Collagène marin",
       "note": "Hydrolysé",
-      "amount": "5 g"
+      "amount": "5 g"
     },
     {
       "name": "Acide hyaluronique",
       "note": "Hydratation",
-      "amount": "10 mg"
+      "amount": "10 mg"
     },
     {
       "name": "Vitamine C",
       "note": "Collagène pour une peau normale",
-      "amount": "80 mg"
+      "amount": "80 mg"
     }
   ],
   "badges": [

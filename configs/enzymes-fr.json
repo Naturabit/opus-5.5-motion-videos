@@ -22,17 +22,17 @@
     {
       "name": "Enzymes digestives",
       "note": "Glucides, protéines, graisses",
-      "amount": "200 mg"
+      "amount": "200 mg"
     },
     {
       "name": "Ferments lactiques",
       "note": "9 souches",
-      "amount": "400 M UFC"
+      "amount": "400 M UFC"
     },
     {
       "name": "Calcium",
       "note": "Fonction normale des enzymes digestives",
-      "amount": "126 mg"
+      "amount": "126 mg"
     }
   ],
   "badges": [
@@ -42,5 +42,6 @@
   "tagline": [
     "Bien-être, *bien fait.*"
   ],
-  "brand": "essence-pure"
+  "brand": "essence-pure",
+  "capsule": "products/capsules/FM48.png"
 }

@@ -19,8 +19,8 @@ export type Product = {
   horizon?: { hook: string[]; product: string; ingredients: string[] };
   /** Logo on the end card. Default "estado-puro". */
   brand?: "estado-puro" | "essence-pure";
-  /** Base colour replacing navy. Default "navy"; "burgundy" is the Clinic line. */
-  palette?: "navy" | "burgundy";
+  /** Theme in src/system/theme.ts. Default "navy"; "burgundy" = Clinic line; "orange" = Magnesio Ultradirect label style. */
+  palette?: "navy" | "burgundy" | "orange";
   /** "powder": `capsules` holds grams and `days` doses; the count scene shows the tin instead of a capsule grid. */
   unit?: "capsules" | "powder";
   /** Capsule/pearl photo (transparent PNG, pointing down-right at ~38deg). Default products/capsule.png. */

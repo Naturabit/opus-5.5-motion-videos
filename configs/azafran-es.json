@@ -3,7 +3,7 @@
   "lang": "es",
   "energy": "daily",
   "name": "Azafrán",
-  "subtitle": "affron® 30 mg",
+  "subtitle": "affron® 30 mg",
   "bottle": "products/bottles/M03.png",
   "hook": [
     "Ánimo.",
@@ -12,7 +12,7 @@
   ],
   "capsules": 40,
   "days": 20,
-  "doseLine": "2 cápsulas al día",
+  "doseLine": "2 cápsulas al día",
   "countLabels": {
     "capsules": "cápsulas",
     "days": "días",
@@ -22,17 +22,17 @@
     {
       "name": "affron®",
       "note": "Estigmas de azafrán",
-      "amount": "30 mg"
+      "amount": "30 mg"
     },
     {
       "name": "Safranal",
       "note": "3,5% lepticrosálidos",
-      "amount": "0,6 mg"
+      "amount": "0,6 mg"
     },
     {
       "name": "Vitamina B6",
       "note": "Función psicológica normal",
-      "amount": "1,4 mg"
+      "amount": "1,4 mg"
     }
   ],
   "badges": [
@@ -41,5 +41,6 @@
   ],
   "tagline": [
     "Bienestar, *bien hecho.*"
-  ]
+  ],
+  "capsule": "products/capsules/M03.png"
 }

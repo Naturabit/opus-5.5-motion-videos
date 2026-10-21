@@ -17,7 +17,7 @@ for (const file of files) {
   if (!Array.isArray(c.hook) || c.hook.length < 1 || c.hook.length > 4 || !c.hook.every(str)) err("hook must have 1-4 lines");
   if (!Array.isArray(c.tagline) || c.tagline.length < 1 || c.tagline.length > 2 || !c.tagline.every(str)) err("tagline must have 1-2 lines");
   if (c.brand !== undefined && !["estado-puro", "essence-pure"].includes(c.brand)) err("brand must be estado-puro or essence-pure");
-  if (c.palette !== undefined && !["navy", "burgundy"].includes(c.palette)) err("palette must be navy or burgundy");
+  if (c.palette !== undefined && !["navy", "burgundy", "orange"].includes(c.palette)) err("palette must be navy, burgundy or orange");
   if (c.unit !== undefined && !["capsules", "powder"].includes(c.unit)) err("unit must be capsules or powder");
   const maxCount = c.unit === "powder" ? 1000 : 120;
   if (!Number.isInteger(c.capsules) || c.capsules < 1 || c.capsules > maxCount) err(`capsules must be an integer 1-${maxCount}`);

@@ -12,7 +12,7 @@
   ],
   "capsules": 60,
   "days": 30,
-  "doseLine": "2 cápsulas al día",
+  "doseLine": "2 cápsulas al día",
   "countLabels": {
     "capsules": "cápsulas",
     "days": "días",
@@ -22,17 +22,17 @@
     {
       "name": "Bisglicinato",
       "note": "Magnesio quelado",
-      "amount": "800 mg"
+      "amount": "800 mg"
     },
     {
       "name": "SideMag® Marine",
       "note": "Magnesio de agua de mar",
-      "amount": "450 mg"
+      "amount": "450 mg"
     },
     {
       "name": "Vitamina B6",
       "note": "Reduce el cansancio y la fatiga",
-      "amount": "0,93 mg"
+      "amount": "0,93 mg"
     }
   ],
   "badges": [
@@ -41,5 +41,6 @@
   ],
   "tagline": [
     "Bienestar, *bien hecho.*"
-  ]
+  ],
+  "capsule": "products/capsules/M45.png"
 }

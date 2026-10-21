@@ -21,18 +21,18 @@
   "ingredients": [
     {
       "name": "Boswellia",
-      "note": "260 mg ácido boswélico",
-      "amount": "400 mg"
+      "note": "260 mg ácido boswélico",
+      "amount": "400 mg"
     },
     {
       "name": "Cúrcuma 25:1",
-      "note": "190 mg curcuminoides",
-      "amount": "200 mg"
+      "note": "190 mg curcuminoides",
+      "amount": "200 mg"
     },
     {
       "name": "BioPerine®",
       "note": "Pimienta negra patentada",
-      "amount": "2 mg"
+      "amount": "2 mg"
     }
   ],
   "badges": [
@@ -41,5 +41,6 @@
   ],
   "tagline": [
     "Bienestar, *bien hecho.*"
-  ]
+  ],
+  "capsule": "products/capsules/M92.png"
 }

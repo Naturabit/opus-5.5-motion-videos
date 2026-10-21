@@ -3,7 +3,7 @@
   "lang": "fr",
   "energy": "daily",
   "name": "Flexi Collagène",
-  "subtitle": "Collagène marin 5 g",
+  "subtitle": "Collagène marin 5 g",
   "bottle": "products/bottles/FM35.png",
   "hook": [
     "Un verre.",
@@ -12,7 +12,7 @@
   ],
   "capsules": 275,
   "days": 25,
-  "doseLine": "11 g par jour",
+  "doseLine": "11 g par jour",
   "countLabels": {
     "capsules": "grammes",
     "days": "doses"
@@ -21,17 +21,17 @@
     {
       "name": "Collagène marin",
       "note": "Hydrolysé",
-      "amount": "5 g"
+      "amount": "5 g"
     },
     {
       "name": "Ovomet®",
       "note": "Membrane d'œuf",
-      "amount": "100 mg"
+      "amount": "100 mg"
     },
     {
       "name": "Vitamine C",
       "note": "Formation normale du collagène",
-      "amount": "80 mg"
+      "amount": "80 mg"
     }
   ],
   "badges": [

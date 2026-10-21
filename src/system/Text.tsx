@@ -1,6 +1,6 @@
 import { interpolate, useCurrentFrame } from "remotion";
 import { clamp } from "./motion";
-import { colors, ease, fonts } from "./theme";
+import { colors, ease, fonts, useTheme } from "./theme";
 
 type Token = { word: string; accent: boolean };
 
@@ -40,24 +40,30 @@ export const MaskWords: React.FC<{
   stagger = 4,
   duration = 24,
   size,
-  color = colors.ink,
-  accentColor = colors.gold,
+  color,
+  accentColor,
   family = "serif",
   weight = 500,
   lineHeight = 1.02,
-  letterSpacing = -0.02,
+  letterSpacing,
   align = "left",
   exitAt,
   uppercase = false,
 }) => {
   const frame = useCurrentFrame();
+  const theme = useTheme();
   const tokens = tokenize(text);
+  // "serif" means the theme's headline face (Marcellus by default).
+  const headline = family === "serif";
+  color ??= theme.ink;
+  accentColor ??= theme.accent;
+  letterSpacing ??= headline ? theme.headlineTracking : -0.02;
   return (
     <div
       style={{
-        fontFamily: family === "serif" ? fonts.serif : fonts.sans,
+        fontFamily: headline ? theme.headline : fonts.sans,
         fontSize: size,
-        fontWeight: weight,
+        fontWeight: headline ? theme.headlineWeight : weight,
         lineHeight,
         letterSpacing: `${letterSpacing}em`,
         color,

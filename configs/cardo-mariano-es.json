@@ -3,7 +3,7 @@
   "lang": "es",
   "energy": "digestive",
   "name": "Cardo Mariano",
-  "subtitle": "10.000 mg",
+  "subtitle": "10.000 mg",
   "bottle": "products/cardo-es.png",
   "hook": [
     "Protege.",
@@ -21,17 +21,17 @@
   "ingredients": [
     {
       "name": "Extracto 25:1",
-      "amount": "400 mg",
+      "amount": "400 mg",
       "note": "Semillas de cardo mariano"
     },
     {
       "name": "Silimarina",
       "amount": "80%",
-      "note": "320 mg por cápsula"
+      "note": "320 mg por cápsula"
     },
     {
       "name": "Citrato de colina",
-      "amount": "200 mg",
+      "amount": "200 mg",
       "note": "Función hepática normal"
     }
   ],
@@ -57,5 +57,6 @@
       "textures/thistle-bee.jpg",
       "textures/leaf-green.jpg"
     ]
-  }
+  },
+  "capsule": "products/capsules/M90.png"
 }

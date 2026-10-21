@@ -3,7 +3,7 @@
   "lang": "es",
   "energy": "energy",
   "name": "Ginseng Rojo Coreano",
-  "subtitle": "1000 mg de raíz",
+  "subtitle": "1000 mg de raíz",
   "bottle": "products/bottles/M96.png",
   "hook": [
     "Menos fatiga.",
@@ -12,7 +12,7 @@
   ],
   "capsules": 50,
   "days": 25,
-  "doseLine": "2 cápsulas al día",
+  "doseLine": "2 cápsulas al día",
   "countLabels": {
     "capsules": "cápsulas",
     "days": "días",
@@ -22,12 +22,12 @@
     {
       "name": "Ginseng rojo",
       "note": "Raíz de Panax ginseng",
-      "amount": "1000 mg"
+      "amount": "1000 mg"
     },
     {
       "name": "Ginsenósidos",
       "note": "Estandarizado",
-      "amount": "20 mg"
+      "amount": "20 mg"
     },
     {
       "name": "IL HWA",
@@ -40,5 +40,6 @@
   ],
   "tagline": [
     "Bienestar, *bien hecho.*"
-  ]
+  ],
+  "capsule": "products/capsules/M96.png"
 }

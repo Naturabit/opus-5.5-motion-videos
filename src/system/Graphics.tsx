@@ -1,6 +1,6 @@
 import { AbsoluteFill, Html5Audio, Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { clamp } from "./motion";
-import { colors, ease } from "./theme";
+import { colors, ease, useTheme } from "./theme";
 
 export const GoldLine: React.FC<{
   delay?: number;
@@ -10,8 +10,10 @@ export const GoldLine: React.FC<{
   color?: string;
   origin?: "left" | "center" | "right";
   vertical?: boolean;
-}> = ({ delay = 0, duration = 20, length, thickness = 3, color = colors.gold, origin = "left", vertical = false }) => {
+}> = ({ delay = 0, duration = 20, length, thickness = 3, color, origin = "left", vertical = false }) => {
   const frame = useCurrentFrame();
+  const theme = useTheme();
+  color ??= theme.accent;
   const p = interpolate(frame, [delay, delay + duration], [0, 1], { ...clamp, easing: ease.out });
   return (
     <div
@@ -33,8 +35,11 @@ export const Wipe: React.FC<{
   color?: string;
   direction?: "left" | "right" | "up" | "down";
   accent?: string;
-}> = ({ at, duration = 16, color = colors.navy, direction = "right", accent = colors.gold }) => {
+}> = ({ at, duration = 16, color, direction = "right", accent }) => {
   const frame = useCurrentFrame();
+  const theme = useTheme();
+  color ??= theme.navy;
+  accent ??= theme.accent;
   const half = duration / 2;
   const inP = interpolate(frame, [at - half, at], [0, 1], { ...clamp, easing: ease.inOut });
   const outP = interpolate(frame, [at, at + half], [0, 1], { ...clamp, easing: ease.inOut });
@@ -65,8 +70,10 @@ export const GoldCircle: React.FC<{
   fill?: string;
   color?: string;
   children?: React.ReactNode;
-}> = ({ delay = 0, size, stroke = 3, fill = "transparent", color = colors.gold, children }) => {
+}> = ({ delay = 0, size, stroke = 3, fill = "transparent", color, children }) => {
   const frame = useCurrentFrame();
+  const theme = useTheme();
+  color ??= theme.accent;
   const { fps } = useVideoConfig();
   const draw = interpolate(frame, [delay, delay + 22], [0, 1], { ...clamp, easing: ease.out });
   const pop = spring({ frame: frame - delay - 6, fps, config: { damping: 14, stiffness: 180 } });

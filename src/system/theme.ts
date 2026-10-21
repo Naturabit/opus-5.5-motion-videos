@@ -1,3 +1,4 @@
+import { createContext, useContext } from "react";
 import { Easing, staticFile } from "remotion";
 import { loadFont } from "@remotion/fonts";
 
@@ -35,12 +36,64 @@ export const colors = {
   capsuleB: "#C9AE83",
 };
 
-// Base colours per product line. Gold and ivory stay the same across palettes.
-export const palettes = {
-  navy: { navy: colors.navy, navyDeep: colors.navyDeep, ink: colors.ink },
-  burgundy: { navy: "#6B2233", navyDeep: "#43121F", ink: "#5A1A28" },
+// Per-product design tokens. Editorial provides one through ThemeContext; system components read
+// their default colours and headline font from it, so a new product line only needs a theme here.
+export type Theme = {
+  navy: string;
+  navyDeep: string;
+  ink: string;
+  ivory: string;
+  ivoryDeep: string;
+  /** Accent for lines, circles and `*word*` highlights (gold by default). */
+  accent: string;
+  /** Accent on dark backgrounds. */
+  accentLight: string;
+  headline: string;
+  headlineWeight: number;
+  headlineTracking: number;
+  /** Ingredient circles filled with the accent (amount in ivory) instead of outlined. */
+  solidCircles?: boolean;
+  /** End card badges sit in a full-width accent band. */
+  band?: boolean;
 };
-export type Palette = (typeof palettes)["navy"];
+
+const base: Theme = {
+  navy: colors.navy,
+  navyDeep: colors.navyDeep,
+  ink: colors.ink,
+  ivory: colors.ivory,
+  ivoryDeep: colors.ivoryDeep,
+  accent: colors.gold,
+  accentLight: colors.goldLight,
+  headline: fonts.serif,
+  headlineWeight: 500,
+  headlineTracking: -0.02,
+};
+
+export const themes = {
+  navy: base,
+  // Estado Puro Clinic line.
+  burgundy: { ...base, navy: "#6B2233", navyDeep: "#43121F", ink: "#5A1A28" },
+  // Magnesio Ultradirect label: navy + orange, bold sans headlines.
+  orange: {
+    ...base,
+    navy: "#102C5E",
+    navyDeep: "#0A1F45",
+    ink: "#102C5E",
+    ivory: "#F8F3ED",
+    ivoryDeep: "#F1E6DA",
+    accent: "#E8601C",
+    accentLight: "#F58A4B",
+    headline: fonts.sans,
+    headlineWeight: 700,
+    headlineTracking: -0.03,
+    solidCircles: true,
+    band: true,
+  },
+} satisfies Record<string, Theme>;
+
+export const ThemeContext = createContext<Theme>(base);
+export const useTheme = () => useContext(ThemeContext);
 
 export const ease = {
   out: Easing.bezier(0.16, 1, 0.3, 1),

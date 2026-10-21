@@ -3,7 +3,7 @@
   "lang": "es",
   "energy": "daily",
   "name": "Ginkgo Biloba",
-  "subtitle": "6.500 mg",
+  "subtitle": "6.500 mg",
   "bottle": "products/bottles/M59.png",
   "hook": [
     "Memoria.",
@@ -22,17 +22,17 @@
     {
       "name": "Extracto 50:1",
       "note": "Hojas de ginkgo",
-      "amount": "130 mg"
+      "amount": "130 mg"
     },
     {
       "name": "Flavonoides",
       "note": "Ginkgoflavonglicósidos",
-      "amount": "31,2 mg"
+      "amount": "31,2 mg"
     },
     {
       "name": "Terpenolactonas",
       "note": "Estandarizado",
-      "amount": "7,8 mg"
+      "amount": "7,8 mg"
     }
   ],
   "badges": [
@@ -41,5 +41,6 @@
   ],
   "tagline": [
     "Bienestar, *bien hecho.*"
-  ]
+  ],
+  "capsule": "products/capsules/M59.png"
 }
